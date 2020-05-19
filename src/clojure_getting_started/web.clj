@@ -12,15 +12,15 @@
 (defn splash []
   {:status 200
    :headers {"Content-Type" "text/plain"}
-   :body (for [kind ["camel" "snake" "kebab"]]
-           (format "<a href='/%s?input=%s'>%s %s</a><br />"
-                   kind sample kind sample))})
+   :body (str "<html>" (for [kind ["camel" "snake" "kebab"]]
+            (format "<a href='/%s?input=%s'>%s %s</a><br />"
+                    kind sample kind sample)))})
 
 (defroutes app
   (GET "/camel" {{input :input} :params}
        {:status 200
         :headers {"Content-Type" "text/html"}
-        :body (csk/->camelCase input)})
+        :body (str "<html>" (csk/->camelCase input) "</html>")})
   (GET "/snake" {{input :input} :params}
        {:status 200
         :headers {"Content-Type" "text/html"}
