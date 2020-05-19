@@ -5,26 +5,30 @@
             [clojure.java.io :as io]
             [ring.adapter.jetty :as jetty]
             [environ.core :refer [env]]
-            [camel-snake-kebab.core :as kebab]))
+            [camel-snake-kebab.core :as csk]))
+
+(def sample (env :sample "sample-string-a-ma-jig"))
 
 (defn splash []
   {:status 200
    :headers {"Content-Type" "text/plain"}
-   :body "Hello from Snort"})
+   :body (for [kind ["camel" "snake" "kebab"]]
+           (format "<a href='/%s?input=%s'>%s %s</a><br />"
+                   kind sample kind sample))})
 
 (defroutes app
   (GET "/camel" {{input :input} :params}
        {:status 200
         :headers {"Content-Type" "text/plain"}
-        :body (kebab/->camelCase input)})
+        :body (csk/->camelCase input)})
   (GET "/snake" {{input :input} :params}
        {:status 200
         :headers {"Content-Type" "text/plain"}
-        :body (kebab/->snake_case input)})
+        :body (csk/->snake_case input)})
   (GET "/kebab" {{input :input} :params}
        {:status 200
         :headers {"Content-Type" "text/plain"}
-        :body (kebab/->kebab-case input)})
+        :body (csk/->kebab-case input)})
   (GET "/" []
        (splash))
   (ANY "*" []
