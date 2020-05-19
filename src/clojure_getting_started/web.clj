@@ -13,7 +13,7 @@
   {:status 200
    :headers {"Content-Type" "text/html"}
    :body (for [kind ["camel" "snake" "kebab"]]
-           (format "<a href='/%s?input=%s'>change to %s case...</a><br />"
+           (format "change to <a href='/%s?input=%s'> %s</a> case... </a<br />"
                    kind sample kind))})
 
 (defroutes app
