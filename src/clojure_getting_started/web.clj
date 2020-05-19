@@ -19,15 +19,15 @@
 (defroutes app
   (GET "/camel" {{input :input} :params}
        {:status 200
-        :headers {"Content-Type" "text/plain"}
+        :headers {"Content-Type" "text/html"}
         :body (csk/->camelCase input)})
   (GET "/snake" {{input :input} :params}
        {:status 200
-        :headers {"Content-Type" "text/plain"}
+        :headers {"Content-Type" "text/html"}
         :body (csk/->snake_case input)})
   (GET "/kebab" {{input :input} :params}
        {:status 200
-        :headers {"Content-Type" "text/plain"}
+        :headers {"Content-Type" "text/html"}
         :body (csk/->kebab-case input)})
   (GET "/" []
        (splash))
