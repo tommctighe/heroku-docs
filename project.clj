@@ -7,6 +7,8 @@
                  [compojure "1.6.1"]
                  [ring/ring-jetty-adapter "1.8.1"]
                  [environ "1.2.0"]
+                 [org.clojure/java.jdbc "0.7.11"]
+                 [org.postgresql/postgresql "42.2.12"]
                  [camel-snake-kebab "0.4.0"]]
   :min-lein-version "2.0.0"
   :plugins [[lein-environ "1.2.0"]]
