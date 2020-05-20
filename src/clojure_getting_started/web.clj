@@ -17,25 +17,30 @@
                    (format "make into <a href='/%s?input=%s'> %s</a> case... </a><br />"
                     kind sample kind))
                 ["<hr /><ul>"]
-                (for [s (db/query (env :database-url)
+                (for [s (db/query (env :database-url "postgres://localhost:5432/docs")
                                   ["select content from sayings"])]
                   (format "<li>%s</li>" (:content s)))
                 ["</ul>"])})
 
+;;; okay!
+
 (defn record [input]
-  (db/insert! (env :database-url "postgres://localhost:5432/kebabs")
+  (db/insert! (env :database-url "postgres://localhost:5432/docs")
               :sayings {:content input}))
 
 (defroutes app
   (GET "/camel" {{input :input} :params}
+       (record (csk/->camelCase input))
        {:status 200
         :headers {"Content-Type" "text/html"}
         :body (csk/->camelCase input)})
   (GET "/snake" {{input :input} :params}
+       (record (csk/->snake_case input))
        {:status 200
         :headers {"Content-Type" "text/html"}
         :body (csk/->snake_case input)})
   (GET "/kebab" {{input :input} :params}
+       (record (csk/->kebab-case input))
        {:status 200
         :headers {"Content-Type" "text/html"}
         :body (csk/->kebab-case input)})
