@@ -1,0 +1,1032 @@
+kingdom,clan,family,name,url
+"Docs, Spec, Metadata",Docs,Docs From the REPL,doc,https://clojuredocs.org/clojure_core/clojure.repl/doc
+"Docs, Spec, Metadata",Docs,Docs From the REPL,find-doc,https://clojuredocs.org/clojure_core/clojure.repl/find-doc
+"Docs, Spec, Metadata",Docs,Docs From the REPL,apropos,https://clojuredocs.org/clojure_core/clojure.repl/apropos
+"Docs, Spec, Metadata",Docs,Docs From the REPL,dir,https://clojuredocs.org/clojure_core/clojure.repl/dir
+"Docs, Spec, Metadata",Docs,Docs From the REPL,source,https://clojuredocs.org/clojure_core/clojure.repl/source
+"Docs, Spec, Metadata",Docs,Docs From the REPL,pst,https://clojuredocs.org/clojure_core/clojure.repl/pst
+"Docs, Spec, Metadata",Docs,Docs From the REPL,javadoc,https://clojuredocs.org/clojure_core/clojure.java.javadoc/javadoc
+"Strings, Numbers",Numbers,Literals,Long,https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html
+"Strings, Numbers",Numbers,Literals,Double,https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html
+"Strings, Numbers",Numbers,Literals,BigDecimal,https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html
+"Strings, Numbers",Numbers,Arithmetic,+,https://clojuredocs.org/clojure_core/clojure.core/%2B
+"Strings, Numbers",Numbers,Arithmetic,-,https://clojuredocs.org/clojure_core/clojure.core/-
+"Strings, Numbers",Numbers,Arithmetic,*,https://clojuredocs.org/clojure_core/clojure.core/*
+"Strings, Numbers",Numbers,Arithmetic,/,https://clojuredocs.org/clojure_core/clojure.core/_fs
+"Strings, Numbers",Numbers,Arithmetic,quot,https://clojuredocs.org/clojure_core/clojure.core/quot
+"Strings, Numbers",Numbers,Arithmetic,rem,https://clojuredocs.org/clojure_core/clojure.core/rem
+"Strings, Numbers",Numbers,Arithmetic,mod,https://clojuredocs.org/clojure_core/clojure.core/mod
+"Strings, Numbers",Numbers,Arithmetic,inc,https://clojuredocs.org/clojure_core/clojure.core/inc
+"Strings, Numbers",Numbers,Arithmetic,dec,https://clojuredocs.org/clojure_core/clojure.core/dec
+"Strings, Numbers",Numbers,Arithmetic,max,https://clojuredocs.org/clojure_core/clojure.core/max
+"Strings, Numbers",Numbers,Arithmetic,min,https://clojuredocs.org/clojure_core/clojure.core/min
+"Strings, Numbers",Numbers,Arithmetic,+,https://clojuredocs.org/clojure_core/clojure.core/%2B%27
+"Strings, Numbers",Numbers,Arithmetic,-',https://clojuredocs.org/clojure_core/clojure.core/-%27
+"Strings, Numbers",Numbers,Arithmetic,*',https://clojuredocs.org/clojure_core/clojure.core/*%27
+"Strings, Numbers",Numbers,Arithmetic,inc',https://clojuredocs.org/clojure_core/clojure.core/inc%27
+"Strings, Numbers",Numbers,Arithmetic,dec',https://clojuredocs.org/clojure_core/clojure.core/dec%27
+"Strings, Numbers",Numbers,Compare,==,https://clojuredocs.org/clojure_core/clojure.core/%3D%3D
+"Strings, Numbers",Numbers,Compare,<,https://clojuredocs.org/clojure_core/clojure.core/%3C
+"Strings, Numbers",Numbers,Compare,>,https://clojuredocs.org/clojure_core/clojure.core/%3E
+"Strings, Numbers",Numbers,Compare,<=,https://clojuredocs.org/clojure_core/clojure.core/%3C%3D
+"Strings, Numbers",Numbers,Compare,>=,https://clojuredocs.org/clojure_core/clojure.core/%3E%3D
+"Strings, Numbers",Numbers,Compare,compare,https://clojuredocs.org/clojure_core/clojure.core/compare
+"Strings, Numbers",Numbers,Bitwise,bit-and,https://clojuredocs.org/clojure_core/clojure.core/bit-and
+"Strings, Numbers",Numbers,Bitwise,bit-or,https://clojuredocs.org/clojure_core/clojure.core/bit-or
+"Strings, Numbers",Numbers,Bitwise,bit-xor,https://clojuredocs.org/clojure_core/clojure.core/bit-xor
+"Strings, Numbers",Numbers,Bitwise,bit-not,https://clojuredocs.org/clojure_core/clojure.core/bit-not
+"Strings, Numbers",Numbers,Bitwise,bit-flip,https://clojuredocs.org/clojure_core/clojure.core/bit-flip
+"Strings, Numbers",Numbers,Bitwise,bit-set,https://clojuredocs.org/clojure_core/clojure.core/bit-set
+"Strings, Numbers",Numbers,Bitwise,bit-shift-right,https://clojuredocs.org/clojure_core/clojure.core/bit-shift-right
+"Strings, Numbers",Numbers,Bitwise,bit-shift-left,https://clojuredocs.org/clojure_core/clojure.core/bit-shift-left
+"Strings, Numbers",Numbers,Bitwise,bit-and-not,https://clojuredocs.org/clojure_core/clojure.core/bit-and-not
+"Strings, Numbers",Numbers,Bitwise,bit-clear,https://clojuredocs.org/clojure_core/clojure.core/bit-clear
+"Strings, Numbers",Numbers,Bitwise,bit-test,https://clojuredocs.org/clojure_core/clojure.core/bit-test
+"Strings, Numbers",Numbers,Bitwise,unsigned-bit-shift-right,https://clojuredocs.org/clojure_core/clojure.core/unsigned-bit-shift-right
+"Strings, Numbers",Numbers,Cast,BigInteger,https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html
+"Strings, Numbers",Numbers,Cast,byte,https://clojuredocs.org/clojure_core/clojure.core/byte
+"Strings, Numbers",Numbers,Cast,short,https://clojuredocs.org/clojure_core/clojure.core/short
+"Strings, Numbers",Numbers,Cast,int,https://clojuredocs.org/clojure_core/clojure.core/int
+"Strings, Numbers",Numbers,Cast,long,https://clojuredocs.org/clojure_core/clojure.core/long
+"Strings, Numbers",Numbers,Cast,float,https://clojuredocs.org/clojure_core/clojure.core/float
+"Strings, Numbers",Numbers,Cast,double,https://clojuredocs.org/clojure_core/clojure.core/double
+"Strings, Numbers",Numbers,Cast,bigdec,https://clojuredocs.org/clojure_core/clojure.core/bigdec
+"Strings, Numbers",Numbers,Cast,bigint,https://clojuredocs.org/clojure_core/clojure.core/bigint
+"Strings, Numbers",Numbers,Cast,num,https://clojuredocs.org/clojure_core/clojure.core/num
+"Strings, Numbers",Numbers,Cast,rationalize,https://clojuredocs.org/clojure_core/clojure.core/rationalize
+"Strings, Numbers",Numbers,Cast,biginteger,https://clojuredocs.org/clojure_core/clojure.core/biginteger
+"Strings, Numbers",Numbers,Test,zero?,https://clojuredocs.org/clojure_core/clojure.core/zero_q
+"Strings, Numbers",Numbers,Test,pos?,https://clojuredocs.org/clojure_core/clojure.core/pos_q
+"Strings, Numbers",Numbers,Test,neg?,https://clojuredocs.org/clojure_core/clojure.core/neg_q
+"Strings, Numbers",Numbers,Test,even?,https://clojuredocs.org/clojure_core/clojure.core/even_q
+"Strings, Numbers",Numbers,Test,odd?,https://clojuredocs.org/clojure_core/clojure.core/odd_q
+"Strings, Numbers",Numbers,Test,number?,https://clojuredocs.org/clojure_core/clojure.core/number_q
+"Strings, Numbers",Numbers,Test,rational?,https://clojuredocs.org/clojure_core/clojure.core/rational_q
+"Strings, Numbers",Numbers,Test,integer?,https://clojuredocs.org/clojure_core/clojure.core/integer_q
+"Strings, Numbers",Numbers,Test,ratio?,https://clojuredocs.org/clojure_core/clojure.core/ratio_q
+"Strings, Numbers",Numbers,Test,decimal?,https://clojuredocs.org/clojure_core/clojure.core/decimal_q
+"Strings, Numbers",Numbers,Test,float?,https://clojuredocs.org/clojure_core/clojure.core/float_q
+"Strings, Numbers",Numbers,Test,double?,https://clojuredocs.org/clojure_core/clojure.core/double_q
+"Strings, Numbers",Numbers,Test,int?,https://clojuredocs.org/clojure_core/clojure.core/int_q
+"Strings, Numbers",Numbers,Test,nat-int?,https://clojuredocs.org/clojure_core/clojure.core/nat-int_q
+"Strings, Numbers",Numbers,Test,neg-int?,https://clojuredocs.org/clojure_core/clojure.core/neg-int_q
+"Strings, Numbers",Numbers,Test,pos-int?,https://clojuredocs.org/clojure_core/clojure.core/pos-int_q
+"Strings, Numbers",Numbers,Random,rand,https://clojuredocs.org/clojure_core/clojure.core/rand
+"Strings, Numbers",Numbers,Random,rand-int,https://clojuredocs.org/clojure_core/clojure.core/rand-int
+"Strings, Numbers",Numbers,Random,with-precision,https://clojuredocs.org/clojure_core/clojure.core/with-precision
+"Strings, Numbers",Numbers,Unchecked,*unchecked-math*,https://clojuredocs.org/clojure_core/clojure.core/*unchecked-math*
+"Strings, Numbers",Numbers,Unchecked,unchecked-add,https://clojuredocs.org/clojure_core/clojure.core/unchecked-add
+"Strings, Numbers",Numbers,Unchecked,unchecked-dec,https://clojuredocs.org/clojure_core/clojure.core/unchecked-dec
+"Strings, Numbers",Numbers,Unchecked,unchecked-inc,https://clojuredocs.org/clojure_core/clojure.core/unchecked-inc
+"Strings, Numbers",Numbers,Unchecked,unchecked-multiply,https://clojuredocs.org/clojure_core/clojure.core/unchecked-multiply
+"Strings, Numbers",Numbers,Unchecked,unchecked-negate,https://clojuredocs.org/clojure_core/clojure.core/unchecked-negate
+"Strings, Numbers",Numbers,Unchecked,unchecked-subtract,https://clojuredocs.org/clojure_core/clojure.core/unchecked-subtract
+"Strings, Numbers",Strings,Create,str,https://clojuredocs.org/clojure_core/clojure.core/str
+"Strings, Numbers",Strings,Create,format,https://clojuredocs.org/clojure_core/clojure.core/format
+"Strings, Numbers",Strings,Create,"""a string""",https://clojure.org/reference/reader#_literals
+"Strings, Numbers",Strings,Use,count,https://clojuredocs.org/clojure_core/clojure.core/count
+"Strings, Numbers",Strings,Use,get,https://clojuredocs.org/clojure_core/clojure.core/get
+"Strings, Numbers",Strings,Use,subs,https://clojuredocs.org/clojure_core/clojure.core/subs
+"Strings, Numbers",Strings,Use,compare,https://clojuredocs.org/clojure_core/clojure.core/compare
+"Strings, Numbers",Strings,Use,join,https://clojuredocs.org/clojure_core/clojure.string/join
+"Strings, Numbers",Strings,Use,escape,https://clojuredocs.org/clojure_core/clojure.string/escape
+"Strings, Numbers",Strings,Use,split,https://clojuredocs.org/clojure_core/clojure.string/split
+"Strings, Numbers",Strings,Use,split-lines,https://clojuredocs.org/clojure_core/clojure.string/split-lines
+"Strings, Numbers",Strings,Use,replace,https://clojuredocs.org/clojure_core/clojure.string/replace
+"Strings, Numbers",Strings,Use,replace-first,https://clojuredocs.org/clojure_core/clojure.string/replace-first
+"Strings, Numbers",Strings,Use,reverse,https://clojuredocs.org/clojure_core/clojure.string/reverse
+"Strings, Numbers",Strings,Use,index-of,https://clojuredocs.org/clojure_core/clojure.string/index-of
+"Strings, Numbers",Strings,Use,last-index-of,https://clojuredocs.org/clojure_core/clojure.string/last-index-of
+"Strings, Numbers",Strings,Regex,Regex,http://www.regular-expressions.info/
+"Strings, Numbers",Strings,Regex,"#""pattern""",https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html
+"Strings, Numbers",Strings,Regex,re-find,https://clojuredocs.org/clojure_core/clojure.core/re-find
+"Strings, Numbers",Strings,Regex,re-seq,https://clojuredocs.org/clojure_core/clojure.core/re-seq
+"Strings, Numbers",Strings,Regex,re-matches,https://clojuredocs.org/clojure_core/clojure.core/re-matches
+"Strings, Numbers",Strings,Regex,re-pattern,https://clojuredocs.org/clojure_core/clojure.core/re-pattern
+"Strings, Numbers",Strings,Regex,re-matcher,https://clojuredocs.org/clojure_core/clojure.core/re-matcher
+"Strings, Numbers",Strings,Regex,re-groups,https://clojuredocs.org/clojure_core/clojure.core/re-groups
+"Strings, Numbers",Strings,Regex,replace,https://clojuredocs.org/clojure_core/clojure.string/replace
+"Strings, Numbers",Strings,Regex,replace-first,https://clojuredocs.org/clojure_core/clojure.string/replace-first
+"Strings, Numbers",Strings,Regex,re-quote-replacement,https://clojuredocs.org/clojure_core/clojure.string/re-quote-replacement
+"Strings, Numbers",Strings,Letters (clojure.string/),capitalize,https://clojuredocs.org/clojure_core/clojure.string/capitalize
+"Strings, Numbers",Strings,Letters (clojure.string/),lower-case,https://clojuredocs.org/clojure_core/clojure.string/lower-case
+"Strings, Numbers",Strings,Letters (clojure.string/),upper-case,https://clojuredocs.org/clojure_core/clojure.string/upper-case
+"Strings, Numbers",Strings,Trim (clojure.string/),trim,https://clojuredocs.org/clojure_core/clojure.string/trim
+"Strings, Numbers",Strings,Trim (clojure.string/),trim-newline,https://clojuredocs.org/clojure_core/clojure.string/trim-newline
+"Strings, Numbers",Strings,Trim (clojure.string/),triml,https://clojuredocs.org/clojure_core/clojure.string/triml
+"Strings, Numbers",Strings,Trim (clojure.string/),trimr,https://clojuredocs.org/clojure_core/clojure.string/trimr
+"Strings, Numbers",Strings,Test,string?,https://clojuredocs.org/clojure_core/clojure.core/string_q
+"Strings, Numbers",Strings,Test,blank?,https://clojuredocs.org/clojure_core/clojure.string/blank_q
+"Strings, Numbers",Strings,Test,starts-with?,https://clojuredocs.org/clojure_core/clojure.string/starts-with_q
+"Strings, Numbers",Strings,Test,ends-with?,https://clojuredocs.org/clojure_core/clojure.string/ends-with_q
+"Strings, Numbers",Strings,Test,includes?,https://clojuredocs.org/clojure_core/clojure.string/includes_q
+"Characters, Keywords, Symbols",Characters,Characters,char,https://clojuredocs.org/clojure_core/clojure.core/char
+"Characters, Keywords, Symbols",Characters,Characters,char?,https://clojuredocs.org/clojure_core/clojure.core/char_q
+"Characters, Keywords, Symbols",Characters,Characters,char-name-string,https://clojuredocs.org/clojure_core/clojure.core/char-name-string
+"Characters, Keywords, Symbols",Characters,Characters,char-escape-string,https://clojuredocs.org/clojure_core/clojure.core/char-escape-string
+"Characters, Keywords, Symbols",Characters,Characters,literals,https://clojure.org/reference/reader#_literals
+"Characters, Keywords, Symbols",Keywords,Keywords,keyword,https://clojuredocs.org/clojure_core/clojure.core/keyword
+"Characters, Keywords, Symbols",Keywords,Keywords,keyword?,https://clojuredocs.org/clojure_core/clojure.core/keyword_q
+"Characters, Keywords, Symbols",Keywords,Keywords,find-keyword,https://clojuredocs.org/clojure_core/clojure.core/find-keyword
+"Characters, Keywords, Symbols",Keywords,Keywords,literals,https://clojure.org/reference/reader#_literals
+"Characters, Keywords, Symbols",Symbols,Symbols,symbol,https://clojuredocs.org/clojure_core/clojure.core/symbol
+"Characters, Keywords, Symbols",Symbols,Symbols,symbol?,https://clojuredocs.org/clojure_core/clojure.core/symbol_q
+"Characters, Keywords, Symbols",Symbols,Symbols,gensym,https://clojuredocs.org/clojure_core/clojure.core/gensym
+"Characters, Keywords, Symbols",Symbols,Symbols,literals,https://clojure.org/reference/reader#_literals
+"Characters, Keywords, Symbols",Misc,Misc,literals,https://clojure.org/reference/reader#_literals
+"Sequences, Collections",Collections,Generic ops,count,https://clojuredocs.org/clojure_core/clojure.core/count
+"Sequences, Collections",Collections,Generic ops,empty,https://clojuredocs.org/clojure_core/clojure.core/empty
+"Sequences, Collections",Collections,Generic ops,not-empty,https://clojuredocs.org/clojure_core/clojure.core/not-empty
+"Sequences, Collections",Collections,Generic ops,into,https://clojuredocs.org/clojure_core/clojure.core/into
+"Sequences, Collections",Collections,Generic ops,conj,https://clojuredocs.org/clojure_core/clojure.core/conj
+"Sequences, Collections",Collections,Generic ops,walk,https://clojuredocs.org/clojure_core/clojure.walk/walk
+"Sequences, Collections",Collections,Generic ops,prewalk,https://clojuredocs.org/clojure_core/clojure.walk/prewalk
+"Sequences, Collections",Collections,Generic ops,prewalk-demo,https://clojuredocs.org/clojure_core/clojure.walk/prewalk-demo
+"Sequences, Collections",Collections,Generic ops,prewalk-replace,https://clojuredocs.org/clojure_core/clojure.walk/prewalk-replace
+"Sequences, Collections",Collections,Generic ops,postwalk,https://clojuredocs.org/clojure_core/clojure.walk/postwalk
+"Sequences, Collections",Collections,Generic ops,postwalk-demo,https://clojuredocs.org/clojure_core/clojure.walk/postwalk-demo
+"Sequences, Collections",Collections,Generic ops,postwalk-replace,https://clojuredocs.org/clojure_core/clojure.walk/postwalk-replace
+"Sequences, Collections",Collections,Generic ops,bounded-count,https://clojuredocs.org/clojure_core/clojure.core/bounded-count
+"Sequences, Collections",Collections,Content tests,distinct?,https://clojuredocs.org/clojure_core/clojure.core/distinct_q
+"Sequences, Collections",Collections,Content tests,empty?,https://clojuredocs.org/clojure_core/clojure.core/empty_q
+"Sequences, Collections",Collections,Content tests,every?,https://clojuredocs.org/clojure_core/clojure.core/every_q
+"Sequences, Collections",Collections,Content tests,not-every?,https://clojuredocs.org/clojure_core/clojure.core/not-every_q
+"Sequences, Collections",Collections,Content tests,some,https://clojuredocs.org/clojure_core/clojure.core/some
+"Sequences, Collections",Collections,Content tests,not-any?,https://clojuredocs.org/clojure_core/clojure.core/not-any_q
+"Sequences, Collections",Collections,Capabilities,sequential?,https://clojuredocs.org/clojure_core/clojure.core/sequential_q
+"Sequences, Collections",Collections,Capabilities,associative?,https://clojuredocs.org/clojure_core/clojure.core/associative_q
+"Sequences, Collections",Collections,Capabilities,sorted?,https://clojuredocs.org/clojure_core/clojure.core/sorted_q
+"Sequences, Collections",Collections,Capabilities,counted?,https://clojuredocs.org/clojure_core/clojure.core/counted_q
+"Sequences, Collections",Collections,Capabilities,reversible?,https://clojuredocs.org/clojure_core/clojure.core/reversible_q
+"Sequences, Collections",Collections,Type tests,coll?,https://clojuredocs.org/clojure_core/clojure.core/coll_q
+"Sequences, Collections",Collections,Type tests,list?,https://clojuredocs.org/clojure_core/clojure.core/list_q
+"Sequences, Collections",Collections,Type tests,vector?,https://clojuredocs.org/clojure_core/clojure.core/vector_q
+"Sequences, Collections",Collections,Type tests,set?,https://clojuredocs.org/clojure_core/clojure.core/set_q
+"Sequences, Collections",Collections,Type tests,map?,https://clojuredocs.org/clojure_core/clojure.core/map_q
+"Sequences, Collections",Collections,Type tests,seq?,https://clojuredocs.org/clojure_core/clojure.core/seq_q
+"Sequences, Collections",Collections,Type tests,record?,https://clojuredocs.org/clojure_core/clojure.core/record_q
+"Sequences, Collections",Collections,Type tests,map-entry?,https://clojuredocs.org/clojure_core/clojure.core/map-entry_q
+"Sequences, Collections",Lists,Create,list,https://clojuredocs.org/clojure_core/clojure.core/list
+"Sequences, Collections",Lists,Create,list*,https://clojuredocs.org/clojure_core/clojure.core/list*
+"Sequences, Collections",Lists,Examine,first,https://clojuredocs.org/clojure_core/clojure.core/first
+"Sequences, Collections",Lists,Examine,nth,https://clojuredocs.org/clojure_core/clojure.core/nth
+"Sequences, Collections",Lists,Examine,peek,https://clojuredocs.org/clojure_core/clojure.core/peek
+"Sequences, Collections",Lists,Examine,.indexOf,https://docs.oracle.com/javase/8/docs/api/java/util/List.html#indexOf-java.lang.Object-
+"Sequences, Collections",Lists,Examine,.lastIndexOf,https://docs.oracle.com/javase/8/docs/api/java/util/List.html#lastIndexOf-java.lang.Object-
+"Sequences, Collections",Lists,Change',cons,https://clojuredocs.org/clojure_core/clojure.core/cons
+"Sequences, Collections",Lists,Change',conj,https://clojuredocs.org/clojure_core/clojure.core/conj
+"Sequences, Collections",Lists,Change',rest,https://clojuredocs.org/clojure_core/clojure.core/rest
+"Sequences, Collections",Lists,Change',pop,https://clojuredocs.org/clojure_core/clojure.core/pop
+"Sequences, Collections",Vectors,Create,vector,https://clojuredocs.org/clojure_core/clojure.core/vector
+"Sequences, Collections",Vectors,Create,vec,https://clojuredocs.org/clojure_core/clojure.core/vec
+"Sequences, Collections",Vectors,Create,vector-of,https://clojuredocs.org/clojure_core/clojure.core/vector-of
+"Sequences, Collections",Vectors,Create,mapv,https://clojuredocs.org/clojure_core/clojure.core/mapv
+"Sequences, Collections",Vectors,Create,filterv,https://clojuredocs.org/clojure_core/clojure.core/filterv
+"Sequences, Collections",Vectors,Create,vector,https://github.com/clojure/core.rrb-vector
+"Sequences, Collections",Vectors,Create,vec,https://github.com/clojure/core.rrb-vector
+"Sequences, Collections",Vectors,Create,vector-of,https://github.com/clojure/core.rrb-vector
+"Sequences, Collections",Vectors,Examine,nth,https://clojuredocs.org/clojure_core/clojure.core/nth
+"Sequences, Collections",Vectors,Examine,get,https://clojuredocs.org/clojure_core/clojure.core/get
+"Sequences, Collections",Vectors,Examine,peek,https://clojuredocs.org/clojure_core/clojure.core/peek
+"Sequences, Collections",Vectors,Examine,.indexOf,https://docs.oracle.com/javase/8/docs/api/java/util/List.html#indexOf-java.lang.Object-
+"Sequences, Collections",Vectors,Examine,.lastIndexOf,https://docs.oracle.com/javase/8/docs/api/java/util/List.html#lastIndexOf-java.lang.Object-
+"Sequences, Collections",Vectors,Change',assoc,https://clojuredocs.org/clojure_core/clojure.core/assoc
+"Sequences, Collections",Vectors,Change',assoc-in,https://clojuredocs.org/clojure_core/clojure.core/assoc-in
+"Sequences, Collections",Vectors,Change',pop,https://clojuredocs.org/clojure_core/clojure.core/pop
+"Sequences, Collections",Vectors,Change',subvec,https://clojuredocs.org/clojure_core/clojure.core/subvec
+"Sequences, Collections",Vectors,Change',replace,https://clojuredocs.org/clojure_core/clojure.core/replace
+"Sequences, Collections",Vectors,Change',conj,https://clojuredocs.org/clojure_core/clojure.core/conj
+"Sequences, Collections",Vectors,Change',rseq,https://clojuredocs.org/clojure_core/clojure.core/rseq
+"Sequences, Collections",Vectors,Change',update,https://clojuredocs.org/clojure_core/clojure.core/update
+"Sequences, Collections",Vectors,Change',update-in,https://clojuredocs.org/clojure_core/clojure.core/update-in
+"Sequences, Collections",Vectors,Ops,reduce-kv,https://clojuredocs.org/clojure_core/clojure.core/reduce-kv
+"Sequences, Collections",Sets,Create,set,https://clojuredocs.org/clojure_core/clojure.core/set
+"Sequences, Collections",Sets,Create,hash-set,https://clojuredocs.org/clojure_core/clojure.core/hash-set
+"Sequences, Collections",Sets,Create,sorted-set,https://clojuredocs.org/clojure_core/clojure.core/sorted-set
+"Sequences, Collections",Sets,Create,sorted-set-by,https://clojuredocs.org/clojure_core/clojure.core/sorted-set-by
+"Sequences, Collections",Sets,Create,sorted-set,https://github.com/clojure/data.avl
+"Sequences, Collections",Sets,Create,sorted-set-by,https://github.com/clojure/data.avl
+"Sequences, Collections",Sets,Create,ordered-set,https://github.com/amalloy/ordered
+"Sequences, Collections",Sets,Create,int-set,https://github.com/clojure/data.int-map
+"Sequences, Collections",Sets,Create,dense-int-set,https://github.com/clojure/data.int-map
+"Sequences, Collections",Sets,Examine,get,https://clojuredocs.org/clojure_core/clojure.core/get
+"Sequences, Collections",Sets,Examine,contains?,https://clojuredocs.org/clojure_core/clojure.core/contains_q
+"Sequences, Collections",Sets,Change',conj,https://clojuredocs.org/clojure_core/clojure.core/conj
+"Sequences, Collections",Sets,Change',disj,https://clojuredocs.org/clojure_core/clojure.core/disj
+"Sequences, Collections",Sets,Set ops,union,https://clojuredocs.org/clojure_core/clojure.set/union
+"Sequences, Collections",Sets,Set ops,difference,https://clojuredocs.org/clojure_core/clojure.set/difference
+"Sequences, Collections",Sets,Set ops,intersection,https://clojuredocs.org/clojure_core/clojure.set/intersection
+"Sequences, Collections",Sets,Set ops,select,https://clojuredocs.org/clojure_core/clojure.set/select
+"Sequences, Collections",Sets,Test,subset?,https://clojuredocs.org/clojure_core/clojure.set/subset_q
+"Sequences, Collections",Sets,Test,superset?,https://clojuredocs.org/clojure_core/clojure.set/superset_q
+"Sequences, Collections",Sets,Sorted sets,rseq,https://clojuredocs.org/clojure_core/clojure.core/rseq
+"Sequences, Collections",Sets,Sorted sets,subseq,https://clojuredocs.org/clojure_core/clojure.core/subseq
+"Sequences, Collections",Sets,Sorted sets,rsubseq,https://clojuredocs.org/clojure_core/clojure.core/rsubseq
+"Sequences, Collections",Maps,Create,hash-map,https://clojuredocs.org/clojure_core/clojure.core/hash-map
+"Sequences, Collections",Maps,Create,array-map,https://clojuredocs.org/clojure_core/clojure.core/array-map
+"Sequences, Collections",Maps,Create,zipmap,https://clojuredocs.org/clojure_core/clojure.core/zipmap
+"Sequences, Collections",Maps,Create,bean,https://clojuredocs.org/clojure_core/clojure.core/bean
+"Sequences, Collections",Maps,Create,frequencies,https://clojuredocs.org/clojure_core/clojure.core/frequencies
+"Sequences, Collections",Maps,Create,group-by,https://clojuredocs.org/clojure_core/clojure.core/group-by
+"Sequences, Collections",Maps,Create,index,https://clojuredocs.org/clojure_core/clojure.set/index
+"Sequences, Collections",Maps,Create,sorted-map,https://clojuredocs.org/clojure_core/clojure.core/sorted-map
+"Sequences, Collections",Maps,Create,sorted-map-by,https://clojuredocs.org/clojure_core/clojure.core/sorted-map-by
+"Sequences, Collections",Maps,Create,sorted-map,https://github.com/clojure/data.avl
+"Sequences, Collections",Maps,Create,sorted-map-by,https://github.com/clojure/data.avl
+"Sequences, Collections",Maps,Create,ordered-map,https://github.com/amalloy/ordered
+"Sequences, Collections",Maps,Create,priority-map,https://github.com/clojure/data.priority-map
+"Sequences, Collections",Maps,Create,ordering-map,https://github.com/amalloy/useful/blob/master/src/flatland/useful/map.clj#L243-L245
+"Sequences, Collections",Maps,Create,int-map,https://github.com/clojure/data.int-map
+"Sequences, Collections",Maps,Examine,get,https://clojuredocs.org/clojure_core/clojure.core/get
+"Sequences, Collections",Maps,Examine,get,https://clojuredocs.org/clojure_core/clojure.core/get
+"Sequences, Collections",Maps,Examine,get-in,https://clojuredocs.org/clojure_core/clojure.core/get-in
+"Sequences, Collections",Maps,Examine,contains?,https://clojuredocs.org/clojure_core/clojure.core/contains_q
+"Sequences, Collections",Maps,Examine,find,https://clojuredocs.org/clojure_core/clojure.core/find
+"Sequences, Collections",Maps,Examine,keys,https://clojuredocs.org/clojure_core/clojure.core/keys
+"Sequences, Collections",Maps,Examine,vals,https://clojuredocs.org/clojure_core/clojure.core/vals
+"Sequences, Collections",Maps,Change',assoc,https://clojuredocs.org/clojure_core/clojure.core/assoc
+"Sequences, Collections",Maps,Change',assoc-in,https://clojuredocs.org/clojure_core/clojure.core/assoc-in
+"Sequences, Collections",Maps,Change',dissoc,https://clojuredocs.org/clojure_core/clojure.core/dissoc
+"Sequences, Collections",Maps,Change',merge,https://clojuredocs.org/clojure_core/clojure.core/merge
+"Sequences, Collections",Maps,Change',merge-with,https://clojuredocs.org/clojure_core/clojure.core/merge-with
+"Sequences, Collections",Maps,Change',select-keys,https://clojuredocs.org/clojure_core/clojure.core/select-keys
+"Sequences, Collections",Maps,Change',update,https://clojuredocs.org/clojure_core/clojure.core/update
+"Sequences, Collections",Maps,Change',update-in,https://clojuredocs.org/clojure_core/clojure.core/update-in
+"Sequences, Collections",Maps,Change',rename-keys,https://clojuredocs.org/clojure_core/clojure.set/rename-keys
+"Sequences, Collections",Maps,Change',map-invert,https://clojuredocs.org/clojure_core/clojure.set/map-invert
+"Sequences, Collections",Maps,Change',Medley,https://github.com/weavejester/medley
+"Sequences, Collections",Maps,Ops,reduce-kv,https://clojuredocs.org/clojure_core/clojure.core/reduce-kv
+"Sequences, Collections",Maps,Entry,key,https://clojuredocs.org/clojure_core/clojure.core/key
+"Sequences, Collections",Maps,Entry,val,https://clojuredocs.org/clojure_core/clojure.core/val
+"Sequences, Collections",Maps,Sorted maps,rseq,https://clojuredocs.org/clojure_core/clojure.core/rseq
+"Sequences, Collections",Maps,Sorted maps,subseq,https://clojuredocs.org/clojure_core/clojure.core/subseq
+"Sequences, Collections",Maps,Sorted maps,rsubseq,https://clojuredocs.org/clojure_core/clojure.core/rsubseq
+"Sequences, Collections",Queues,Examine,peek,https://clojuredocs.org/clojure_core/clojure.core/peek
+"Sequences, Collections",Queues,Change',conj,https://clojuredocs.org/clojure_core/clojure.core/conj
+"Sequences, Collections",Queues,Change',pop,https://clojuredocs.org/clojure_core/clojure.core/pop
+"Sequences, Collections",Relations,,join,https://clojuredocs.org/clojure_core/clojure.set/join
+"Sequences, Collections",Relations,,select,https://clojuredocs.org/clojure_core/clojure.set/select
+"Sequences, Collections",Relations,,project,https://clojuredocs.org/clojure_core/clojure.set/project
+"Sequences, Collections",Relations,,union,https://clojuredocs.org/clojure_core/clojure.set/union
+"Sequences, Collections",Relations,,difference,https://clojuredocs.org/clojure_core/clojure.set/difference
+"Sequences, Collections",Relations,,intersection,https://clojuredocs.org/clojure_core/clojure.set/intersection
+"Sequences, Collections",Relations,,index,https://clojuredocs.org/clojure_core/clojure.set/index
+"Sequences, Collections",Relations,,rename,https://clojuredocs.org/clojure_core/clojure.set/rename
+"Sequences, Collections",Transients,,clojure.org/reference/transients,https://clojure.org/reference/transients
+"Sequences, Collections",Transients,Create,transient,https://clojuredocs.org/clojure_core/clojure.core/transient
+"Sequences, Collections",Transients,Create,persistent!,https://clojuredocs.org/clojure_core/clojure.core/persistent%21
+"Sequences, Collections",Transients,Change,conj!,https://clojuredocs.org/clojure_core/clojure.core/conj%21
+"Sequences, Collections",Transients,Change,pop!,https://clojuredocs.org/clojure_core/clojure.core/pop%21
+"Sequences, Collections",Transients,Change,assoc!,https://clojuredocs.org/clojure_core/clojure.core/assoc%21
+"Sequences, Collections",Transients,Change,dissoc!,https://clojuredocs.org/clojure_core/clojure.core/dissoc%21
+"Sequences, Collections",Transients,Change,disj!,https://clojuredocs.org/clojure_core/clojure.core/disj%21
+"Sequences, Collections",Misc,Compare,=,https://clojuredocs.org/clojure_core/clojure.core/%3D
+"Sequences, Collections",Misc,Compare,identical?,https://clojuredocs.org/clojure_core/clojure.core/identical_q
+"Sequences, Collections",Misc,Compare,not=,https://clojuredocs.org/clojure_core/clojure.core/not%3D
+"Sequences, Collections",Misc,Compare,not,https://clojuredocs.org/clojure_core/clojure.core/not
+"Sequences, Collections",Misc,Compare,compare,https://clojuredocs.org/clojure_core/clojure.core/compare
+"Sequences, Collections",Misc,Compare,clojure.data/diff,https://clojuredocs.org/clojure_core/clojure.data/diff
+"Sequences, Collections",Misc,Test,true?,https://clojuredocs.org/clojure_core/clojure.core/true_q
+"Sequences, Collections",Misc,Test,false?,https://clojuredocs.org/clojure_core/clojure.core/false_q
+"Sequences, Collections",Misc,Test,instance?,https://clojuredocs.org/clojure_core/clojure.core/instance_q
+"Sequences, Collections",Misc,Test,nil?,https://clojuredocs.org/clojure_core/clojure.core/nil_q
+"Sequences, Collections",Misc,Test,some?,https://clojuredocs.org/clojure_core/clojure.core/some_q
+"Sequences, Collections",Sequences,Creating lazy from collection,seq,https://clojuredocs.org/clojure_core/clojure.core/seq
+"Sequences, Collections",Sequences,Creating lazy from collection,vals,https://clojuredocs.org/clojure_core/clojure.core/vals
+"Sequences, Collections",Sequences,Creating lazy from collection,keys,https://clojuredocs.org/clojure_core/clojure.core/keys
+"Sequences, Collections",Sequences,Creating lazy from collection,rseq,https://clojuredocs.org/clojure_core/clojure.core/rseq
+"Sequences, Collections",Sequences,Creating lazy from collection,subseq,https://clojuredocs.org/clojure_core/clojure.core/subseq
+"Sequences, Collections",Sequences,Creating lazy from collection,rsubseq,https://clojuredocs.org/clojure_core/clojure.core/rsubseq
+"Sequences, Collections",Sequences,Creating lazy from collection,sequence,https://clojuredocs.org/clojure_core/clojure.core/sequence
+"Sequences, Collections",Sequences,Creating lazy from producer fn,lazy-seq,https://clojuredocs.org/clojure_core/clojure.core/lazy-seq
+"Sequences, Collections",Sequences,Creating lazy from producer fn,repeatedly,https://clojuredocs.org/clojure_core/clojure.core/repeatedly
+"Sequences, Collections",Sequences,Creating lazy from producer fn,iterate,https://clojuredocs.org/clojure_core/clojure.core/iterate
+"Sequences, Collections",Sequences,Creating lazy from constant,repeat,https://clojuredocs.org/clojure_core/clojure.core/repeat
+"Sequences, Collections",Sequences,Creating lazy from constant,range,https://clojuredocs.org/clojure_core/clojure.core/range
+"Sequences, Collections",Sequences,Creating lazy from other,file-seq,https://clojuredocs.org/clojure_core/clojure.core/file-seq
+"Sequences, Collections",Sequences,Creating lazy from other,line-seq,https://clojuredocs.org/clojure_core/clojure.core/line-seq
+"Sequences, Collections",Sequences,Creating lazy from other,resultset-seq,https://clojuredocs.org/clojure_core/clojure.core/resultset-seq
+"Sequences, Collections",Sequences,Creating lazy from other,re-seq,https://clojuredocs.org/clojure_core/clojure.core/re-seq
+"Sequences, Collections",Sequences,Creating lazy from other,tree-seq,https://clojuredocs.org/clojure_core/clojure.core/tree-seq
+"Sequences, Collections",Sequences,Creating lazy from other,xml-seq,https://clojuredocs.org/clojure_core/clojure.core/xml-seq
+"Sequences, Collections",Sequences,Creating lazy from other,iterator-seq,https://clojuredocs.org/clojure_core/clojure.core/iterator-seq
+"Sequences, Collections",Sequences,Creating lazy from other,enumeration-seq,https://clojuredocs.org/clojure_core/clojure.core/enumeration-seq
+"Sequences, Collections",Sequences,Creating lazy from seq,keep,https://clojuredocs.org/clojure_core/clojure.core/keep
+"Sequences, Collections",Sequences,Creating lazy from seq,keep-indexed,https://clojuredocs.org/clojure_core/clojure.core/keep-indexed
+"Sequences, Collections",Sequences,"Seq in, Seq out -- get shorter",distinct,https://clojuredocs.org/clojure_core/clojure.core/distinct
+"Sequences, Collections",Sequences,"Seq in, Seq out -- get shorter",filter,https://clojuredocs.org/clojure_core/clojure.core/filter
+"Sequences, Collections",Sequences,"Seq in, Seq out -- get shorter",remove,https://clojuredocs.org/clojure_core/clojure.core/remove
+"Sequences, Collections",Sequences,"Seq in, Seq out -- get shorter",take-nth,https://clojuredocs.org/clojure_core/clojure.core/take-nth
+"Sequences, Collections",Sequences,"Seq in, Seq out -- get shorter",for,https://clojuredocs.org/clojure_core/clojure.core/for
+"Sequences, Collections",Sequences,"Seq in, Seq out -- get shorter",dedupe,https://clojuredocs.org/clojure_core/clojure.core/dedupe
+"Sequences, Collections",Sequences,"Seq in, Seq out -- get shorter",random-sample,https://clojuredocs.org/clojure_core/clojure.core/random-sample
+"Sequences, Collections",Sequences,"Seq in, Seq out -- get longer",cons,https://clojuredocs.org/clojure_core/clojure.core/cons
+"Sequences, Collections",Sequences,"Seq in, Seq out -- get longer",conj,https://clojuredocs.org/clojure_core/clojure.core/conj
+"Sequences, Collections",Sequences,"Seq in, Seq out -- get longer",concat,https://clojuredocs.org/clojure_core/clojure.core/concat
+"Sequences, Collections",Sequences,"Seq in, Seq out -- get longer",lazy-cat,https://clojuredocs.org/clojure_core/clojure.core/lazy-cat
+"Sequences, Collections",Sequences,"Seq in, Seq out -- get longer",mapcat,https://clojuredocs.org/clojure_core/clojure.core/mapcat
+"Sequences, Collections",Sequences,"Seq in, Seq out -- get longer",cycle,https://clojuredocs.org/clojure_core/clojure.core/cycle
+"Sequences, Collections",Sequences,"Seq in, Seq out -- get longer",interleave,https://clojuredocs.org/clojure_core/clojure.core/interleave
+"Sequences, Collections",Sequences,"Seq in, Seq out -- get longer",interpose,https://clojuredocs.org/clojure_core/clojure.core/interpose
+"Sequences, Collections",Sequences,"Seq in, Seq out -- tail-items",rest,https://clojuredocs.org/clojure_core/clojure.core/rest
+"Sequences, Collections",Sequences,"Seq in, Seq out -- tail-items",nthrest,https://clojuredocs.org/clojure_core/clojure.core/nthrest
+"Sequences, Collections",Sequences,"Seq in, Seq out -- tail-items",next,https://clojuredocs.org/clojure_core/clojure.core/next
+"Sequences, Collections",Sequences,"Seq in, Seq out -- tail-items",fnext,https://clojuredocs.org/clojure_core/clojure.core/fnext
+"Sequences, Collections",Sequences,"Seq in, Seq out -- tail-items",nnext,https://clojuredocs.org/clojure_core/clojure.core/nnext
+"Sequences, Collections",Sequences,"Seq in, Seq out -- tail-items",drop,https://clojuredocs.org/clojure_core/clojure.core/drop
+"Sequences, Collections",Sequences,"Seq in, Seq out -- tail-items",drop-while,https://clojuredocs.org/clojure_core/clojure.core/drop-while
+"Sequences, Collections",Sequences,"Seq in, Seq out -- tail-items",take-last,https://clojuredocs.org/clojure_core/clojure.core/take-last
+"Sequences, Collections",Sequences,"Seq in, Seq out -- tail-items",for,https://clojuredocs.org/clojure_core/clojure.core/for
+"Sequences, Collections",Sequences,"Seq in, Seq out -- head-items",take,https://clojuredocs.org/clojure_core/clojure.core/take
+"Sequences, Collections",Sequences,"Seq in, Seq out -- head-items",take-while,https://clojuredocs.org/clojure_core/clojure.core/take-while
+"Sequences, Collections",Sequences,"Seq in, Seq out -- head-items",butlast,https://clojuredocs.org/clojure_core/clojure.core/butlast
+"Sequences, Collections",Sequences,"Seq in, Seq out -- head-items",drop-last,https://clojuredocs.org/clojure_core/clojure.core/drop-last
+"Sequences, Collections",Sequences,"Seq in, Seq out -- head-items",for,https://clojuredocs.org/clojure_core/clojure.core/for
+"Sequences, Collections",Sequences,"Seq in, Seq out -- 'change'",conj,https://clojuredocs.org/clojure_core/clojure.core/conj
+"Sequences, Collections",Sequences,"Seq in, Seq out -- 'change'",concat,https://clojuredocs.org/clojure_core/clojure.core/concat
+"Sequences, Collections",Sequences,"Seq in, Seq out -- 'change'",distinct,https://clojuredocs.org/clojure_core/clojure.core/distinct
+"Sequences, Collections",Sequences,"Seq in, Seq out -- 'change'",flatten,https://clojuredocs.org/clojure_core/clojure.core/flatten
+"Sequences, Collections",Sequences,"Seq in, Seq out -- 'change'",group-by,https://clojuredocs.org/clojure_core/clojure.core/group-by
+"Sequences, Collections",Sequences,"Seq in, Seq out -- 'change'",partition,https://clojuredocs.org/clojure_core/clojure.core/partition
+"Sequences, Collections",Sequences,"Seq in, Seq out -- 'change'",partition-all,https://clojuredocs.org/clojure_core/clojure.core/partition-all
+"Sequences, Collections",Sequences,"Seq in, Seq out -- 'change'",partition-by,https://clojuredocs.org/clojure_core/clojure.core/partition-by
+"Sequences, Collections",Sequences,"Seq in, Seq out -- 'change'",split-at,https://clojuredocs.org/clojure_core/clojure.core/split-at
+"Sequences, Collections",Sequences,"Seq in, Seq out -- 'change'",split-with,https://clojuredocs.org/clojure_core/clojure.core/split-with
+"Sequences, Collections",Sequences,"Seq in, Seq out -- 'change'",filter,https://clojuredocs.org/clojure_core/clojure.core/filter
+"Sequences, Collections",Sequences,"Seq in, Seq out -- 'change'",remove,https://clojuredocs.org/clojure_core/clojure.core/remove
+"Sequences, Collections",Sequences,"Seq in, Seq out -- 'change'",replace,https://clojuredocs.org/clojure_core/clojure.core/replace
+"Sequences, Collections",Sequences,"Seq in, Seq out -- 'change'",shuffle,https://clojuredocs.org/clojure_core/clojure.core/shuffle
+"Sequences, Collections",Sequences,"Seq in, Seq out -- rearrange",reverse,https://clojuredocs.org/clojure_core/clojure.core/reverse
+"Sequences, Collections",Sequences,"Seq in, Seq out -- rearrange",sort,https://clojuredocs.org/clojure_core/clojure.core/sort
+"Sequences, Collections",Sequences,"Seq in, Seq out -- rearrange",sort-by,https://clojuredocs.org/clojure_core/clojure.core/sort-by
+"Sequences, Collections",Sequences,"Seq in, Seq out -- rearrange",compare,https://clojuredocs.org/clojure_core/clojure.core/compare
+"Sequences, Collections",Sequences,"Seq in, Seq out -- process items",map,https://clojuredocs.org/clojure_core/clojure.core/map
+"Sequences, Collections",Sequences,"Seq in, Seq out -- process items",pmap,https://clojuredocs.org/clojure_core/clojure.core/pmap
+"Sequences, Collections",Sequences,"Seq in, Seq out -- process items",map-indexed,https://clojuredocs.org/clojure_core/clojure.core/map-indexed
+"Sequences, Collections",Sequences,"Seq in, Seq out -- process items",mapcat,https://clojuredocs.org/clojure_core/clojure.core/mapcat
+"Sequences, Collections",Sequences,"Seq in, Seq out -- process items",for,https://clojuredocs.org/clojure_core/clojure.core/for
+"Sequences, Collections",Sequences,"Seq in, Seq out -- process items",replace,https://clojuredocs.org/clojure_core/clojure.core/replace
+"Sequences, Collections",Sequences,Using a Seq -- extract item,seque,https://clojuredocs.org/clojure_core/clojure.core/seque
+"Sequences, Collections",Sequences,Using a Seq -- extract item,first,https://clojuredocs.org/clojure_core/clojure.core/first
+"Sequences, Collections",Sequences,Using a Seq -- extract item,second,https://clojuredocs.org/clojure_core/clojure.core/second
+"Sequences, Collections",Sequences,Using a Seq -- extract item,last,https://clojuredocs.org/clojure_core/clojure.core/last
+"Sequences, Collections",Sequences,Using a Seq -- extract item,rest,https://clojuredocs.org/clojure_core/clojure.core/rest
+"Sequences, Collections",Sequences,Using a Seq -- extract item,next,https://clojuredocs.org/clojure_core/clojure.core/next
+"Sequences, Collections",Sequences,Using a Seq -- extract item,ffirst,https://clojuredocs.org/clojure_core/clojure.core/ffirst
+"Sequences, Collections",Sequences,Using a Seq -- extract item,nfirst,https://clojuredocs.org/clojure_core/clojure.core/nfirst
+"Sequences, Collections",Sequences,Using a Seq -- extract item,fnext,https://clojuredocs.org/clojure_core/clojure.core/fnext
+"Sequences, Collections",Sequences,Using a Seq -- extract item,nnext,https://clojuredocs.org/clojure_core/clojure.core/nnext
+"Sequences, Collections",Sequences,Using a Seq -- extract item,nth,https://clojuredocs.org/clojure_core/clojure.core/nth
+"Sequences, Collections",Sequences,Using a Seq -- extract item,nthnext,https://clojuredocs.org/clojure_core/clojure.core/nthnext
+"Sequences, Collections",Sequences,Using a Seq -- extract item,rand-nth,https://clojuredocs.org/clojure_core/clojure.core/rand-nth
+"Sequences, Collections",Sequences,Using a Seq -- extract item,when-first,https://clojuredocs.org/clojure_core/clojure.core/when-first
+"Sequences, Collections",Sequences,Using a Seq -- extract item,max-key,https://clojuredocs.org/clojure_core/clojure.core/max-key
+"Sequences, Collections",Sequences,Using a Seq -- extract item,min-key,https://clojuredocs.org/clojure_core/clojure.core/min-key
+"Sequences, Collections",Sequences,Using a Seq -- construct coll,zipmap,https://clojuredocs.org/clojure_core/clojure.core/zipmap
+"Sequences, Collections",Sequences,Using a Seq -- construct coll,into,https://clojuredocs.org/clojure_core/clojure.core/into
+"Sequences, Collections",Sequences,Using a Seq -- construct coll,reduce,https://clojuredocs.org/clojure_core/clojure.core/reduce
+"Sequences, Collections",Sequences,Using a Seq -- construct coll,reductions,https://clojuredocs.org/clojure_core/clojure.core/reductions
+"Sequences, Collections",Sequences,Using a Seq -- construct coll,set,https://clojuredocs.org/clojure_core/clojure.core/set
+"Sequences, Collections",Sequences,Using a Seq -- construct coll,vec,https://clojuredocs.org/clojure_core/clojure.core/vec
+"Sequences, Collections",Sequences,Using a Seq -- construct coll,into-array,https://clojuredocs.org/clojure_core/clojure.core/into-array
+"Sequences, Collections",Sequences,Using a Seq -- construct coll,to-array-2d,https://clojuredocs.org/clojure_core/clojure.core/to-array-2d
+"Sequences, Collections",Sequences,Using a Seq -- construct coll,mapv,https://clojuredocs.org/clojure_core/clojure.core/mapv
+"Sequences, Collections",Sequences,Using a Seq -- construct coll,filterv,https://clojuredocs.org/clojure_core/clojure.core/filterv
+"Sequences, Collections",Sequences,Using a Seq -- pass to fn,apply,https://clojuredocs.org/clojure_core/clojure.core/apply
+"Sequences, Collections",Sequences,Using a Seq -- search,some,https://clojuredocs.org/clojure_core/clojure.core/some
+"Sequences, Collections",Sequences,Using a Seq -- search,filter,https://clojuredocs.org/clojure_core/clojure.core/filter
+"Sequences, Collections",Sequences,Using a Seq -- force evaluation,doseq,https://clojuredocs.org/clojure_core/clojure.core/doseq
+"Sequences, Collections",Sequences,Using a Seq -- force evaluation,dorun,https://clojuredocs.org/clojure_core/clojure.core/dorun
+"Sequences, Collections",Sequences,Using a Seq -- force evaluation,doall,https://clojuredocs.org/clojure_core/clojure.core/doall
+"Sequences, Collections",Sequences,Using a Seq -- force evaluation,run!,https://clojuredocs.org/clojure_core/clojure.core/run%21
+"Sequences, Collections",Sequences,Using a Seq -- check for forced,realized?,https://clojuredocs.org/clojure_core/clojure.core/realized_q
+"Functions, Predicates, Transducers",Transducers,,clojure.org/reference/transducers,https://clojure.org/reference/transducers
+"Functions, Predicates, Transducers",Transducers,Off the shelf,map,https://clojuredocs.org/clojure_core/clojure.core/map
+"Functions, Predicates, Transducers",Transducers,Off the shelf,mapcat,https://clojuredocs.org/clojure_core/clojure.core/mapcat
+"Functions, Predicates, Transducers",Transducers,Off the shelf,filter,https://clojuredocs.org/clojure_core/clojure.core/filter
+"Functions, Predicates, Transducers",Transducers,Off the shelf,remove,https://clojuredocs.org/clojure_core/clojure.core/remove
+"Functions, Predicates, Transducers",Transducers,Off the shelf,take,https://clojuredocs.org/clojure_core/clojure.core/take
+"Functions, Predicates, Transducers",Transducers,Off the shelf,take-while,https://clojuredocs.org/clojure_core/clojure.core/take-while
+"Functions, Predicates, Transducers",Transducers,Off the shelf,take-nth,https://clojuredocs.org/clojure_core/clojure.core/take-nth
+"Functions, Predicates, Transducers",Transducers,Off the shelf,drop,https://clojuredocs.org/clojure_core/clojure.core/drop
+"Functions, Predicates, Transducers",Transducers,Off the shelf,drop-while,https://clojuredocs.org/clojure_core/clojure.core/drop-while
+"Functions, Predicates, Transducers",Transducers,Off the shelf,replace,https://clojuredocs.org/clojure_core/clojure.core/replace
+"Functions, Predicates, Transducers",Transducers,Off the shelf,partition-by,https://clojuredocs.org/clojure_core/clojure.core/partition-by
+"Functions, Predicates, Transducers",Transducers,Off the shelf,partition-all,https://clojuredocs.org/clojure_core/clojure.core/partition-all
+"Functions, Predicates, Transducers",Transducers,Off the shelf,keep,https://clojuredocs.org/clojure_core/clojure.core/keep
+"Functions, Predicates, Transducers",Transducers,Off the shelf,keep-indexed,https://clojuredocs.org/clojure_core/clojure.core/keep-indexed
+"Functions, Predicates, Transducers",Transducers,Off the shelf,map-indexed,https://clojuredocs.org/clojure_core/clojure.core/map-indexed
+"Functions, Predicates, Transducers",Transducers,Off the shelf,distinct,https://clojuredocs.org/clojure_core/clojure.core/distinct
+"Functions, Predicates, Transducers",Transducers,Off the shelf,interpose,https://clojuredocs.org/clojure_core/clojure.core/interpose
+"Functions, Predicates, Transducers",Transducers,Off the shelf,cat,https://clojuredocs.org/clojure_core/clojure.core/cat
+"Functions, Predicates, Transducers",Transducers,Off the shelf,dedupe,https://clojuredocs.org/clojure_core/clojure.core/dedupe
+"Functions, Predicates, Transducers",Transducers,Off the shelf,random-sample,https://clojuredocs.org/clojure_core/clojure.core/random-sample
+"Functions, Predicates, Transducers",Transducers,Off the shelf,halt-when,https://clojuredocs.org/clojure_core/clojure.core/halt-when
+"Functions, Predicates, Transducers",Transducers,Create your own,completing,https://clojuredocs.org/clojure_core/clojure.core/completing
+"Functions, Predicates, Transducers",Transducers,Create your own,ensure-reduced,https://clojuredocs.org/clojure_core/clojure.core/ensure-reduced
+"Functions, Predicates, Transducers",Transducers,Create your own,unreduced,https://clojuredocs.org/clojure_core/clojure.core/unreduced
+"Functions, Predicates, Transducers",Transducers,Use,into,https://clojuredocs.org/clojure_core/clojure.core/into
+"Functions, Predicates, Transducers",Transducers,Use,sequence,https://clojuredocs.org/clojure_core/clojure.core/sequence
+"Functions, Predicates, Transducers",Transducers,Use,transduce,https://clojuredocs.org/clojure_core/clojure.core/transduce
+"Functions, Predicates, Transducers",Transducers,Use,eduction,https://clojuredocs.org/clojure_core/clojure.core/eduction
+"Functions, Predicates, Transducers",Transducers,Create your own,reduced,https://clojuredocs.org/clojure_core/clojure.core/reduced
+"Functions, Predicates, Transducers",Transducers,Early termination,reduced?,https://clojuredocs.org/clojure_core/clojure.core/reduced_q
+"Functions, Predicates, Transducers",Transducers,Early termination,deref,https://clojuredocs.org/clojure_core/clojure.core/deref
+"Docs, Spec, Metadata",Spec,rationale,rationale,https://clojure.org/about/spec
+"Docs, Spec, Metadata",Spec,guide,guide,https://clojure.org/guides/spec
+"Docs, Spec, Metadata",Spec,Operations,valid?,https://clojuredocs.org/clojure_core/clojure.spec.alpha/valid_q
+"Docs, Spec, Metadata",Spec,Operations,conform,https://clojuredocs.org/clojure_core/clojure.spec.alpha/conform
+"Docs, Spec, Metadata",Spec,Operations,unform,https://clojuredocs.org/clojure_core/clojure.spec.alpha/unform
+"Docs, Spec, Metadata",Spec,Operations,explain,https://clojuredocs.org/clojure_core/clojure.spec.alpha/explain
+"Docs, Spec, Metadata",Spec,Operations,explain-data,https://clojuredocs.org/clojure_core/clojure.spec.alpha/explain-data
+"Docs, Spec, Metadata",Spec,Operations,explain-str,https://clojuredocs.org/clojure_core/clojure.spec.alpha/explain-str
+"Docs, Spec, Metadata",Spec,Operations,explain-out,https://clojuredocs.org/clojure_core/clojure.spec.alpha/explain-out
+"Docs, Spec, Metadata",Spec,Operations,form,https://clojuredocs.org/clojure_core/clojure.spec.alpha/form
+"Docs, Spec, Metadata",Spec,Operations,describe,https://clojuredocs.org/clojure_core/clojure.spec.alpha/describe
+"Docs, Spec, Metadata",Spec,Operations,assert,https://clojuredocs.org/clojure_core/clojure.spec.alpha/assert
+"Docs, Spec, Metadata",Spec,Operations,check-asserts,https://clojuredocs.org/clojure_core/clojure.spec.alpha/check-asserts
+"Docs, Spec, Metadata",Spec,Operations,check-asserts?,https://clojuredocs.org/clojure_core/clojure.spec.alpha/check-asserts_q
+"Docs, Spec, Metadata",Spec,Generator ops,gen,https://clojuredocs.org/clojure_core/clojure.spec.alpha/gen
+"Docs, Spec, Metadata",Spec,Generator ops,exercise,https://clojuredocs.org/clojure_core/clojure.spec.alpha/exercise
+"Docs, Spec, Metadata",Spec,Generator ops,exercise-fn,https://clojuredocs.org/clojure_core/clojure.spec.alpha/exercise-fn
+"Docs, Spec, Metadata",Spec,Defn. & registry,def,https://clojuredocs.org/clojure_core/clojure.spec.alpha/def
+"Docs, Spec, Metadata",Spec,Defn. & registry,fdef,https://clojuredocs.org/clojure_core/clojure.spec.alpha/fdef
+"Docs, Spec, Metadata",Spec,Defn. & registry,registry,https://clojuredocs.org/clojure_core/clojure.spec.alpha/registry
+"Docs, Spec, Metadata",Spec,Defn. & registry,get-spec,https://clojuredocs.org/clojure_core/clojure.spec.alpha/get-spec
+"Docs, Spec, Metadata",Spec,Defn. & registry,spec?,https://clojuredocs.org/clojure_core/clojure.spec.alpha/spec_q
+"Docs, Spec, Metadata",Spec,Defn. & registry,spec,https://clojuredocs.org/clojure_core/clojure.spec.alpha/spec
+"Docs, Spec, Metadata",Spec,Defn. & registry,with-gen,https://clojuredocs.org/clojure_core/clojure.spec.alpha/with-gen
+"Docs, Spec, Metadata",Spec,Logical,and,https://clojuredocs.org/clojure_core/clojure.spec.alpha/and
+"Docs, Spec, Metadata",Spec,Logical,or,https://clojuredocs.org/clojure_core/clojure.spec.alpha/or
+"Docs, Spec, Metadata",Spec,Logical,coll-of,https://clojuredocs.org/clojure_core/clojure.spec.alpha/coll-of
+"Docs, Spec, Metadata",Spec,Logical,map-of,https://clojuredocs.org/clojure_core/clojure.spec.alpha/map-of
+"Docs, Spec, Metadata",Spec,Logical,every,https://clojuredocs.org/clojure_core/clojure.spec.alpha/every
+"Docs, Spec, Metadata",Spec,Logical,every-kv,https://clojuredocs.org/clojure_core/clojure.spec.alpha/every-kv
+"Docs, Spec, Metadata",Spec,Logical,keys,https://clojuredocs.org/clojure_core/clojure.spec.alpha/keys
+"Docs, Spec, Metadata",Spec,Logical,merge,https://clojuredocs.org/clojure_core/clojure.spec.alpha/merge
+"Docs, Spec, Metadata",Spec,Regex,cat,https://clojuredocs.org/clojure_core/clojure.spec.alpha/cat
+"Docs, Spec, Metadata",Spec,Regex,alt,https://clojuredocs.org/clojure_core/clojure.spec.alpha/alt
+"Docs, Spec, Metadata",Spec,Regex,*,https://clojuredocs.org/clojure_core/clojure.spec.alpha/*
+"Docs, Spec, Metadata",Spec,Regex,+,https://clojuredocs.org/clojure_core/clojure.spec.alpha/%2B
+"Docs, Spec, Metadata",Spec,Regex,?,https://clojuredocs.org/clojure_core/clojure.spec.alpha/_q
+"Docs, Spec, Metadata",Spec,Regex,&,https://clojuredocs.org/clojure_core/clojure.spec.alpha/%26
+"Docs, Spec, Metadata",Spec,Regex,keys*,https://clojuredocs.org/clojure_core/clojure.spec.alpha/keys*
+"Docs, Spec, Metadata",Spec,Range,int-in,https://clojuredocs.org/clojure_core/clojure.spec.alpha/int-in
+"Docs, Spec, Metadata",Spec,Range,inst-in,https://clojuredocs.org/clojure_core/clojure.spec.alpha/inst-in
+"Docs, Spec, Metadata",Spec,Range,double-in,https://clojuredocs.org/clojure_core/clojure.spec.alpha/double-in
+"Docs, Spec, Metadata",Spec,Range,int-in-range?,https://clojuredocs.org/clojure_core/clojure.spec.alpha/int-in-range_q
+"Docs, Spec, Metadata",Spec,Range,inst-in-range?,https://clojuredocs.org/clojure_core/clojure.spec.alpha/inst-in-range_q
+"Docs, Spec, Metadata",Spec,Other,nilable,https://clojuredocs.org/clojure_core/clojure.spec.alpha/nilable
+"Docs, Spec, Metadata",Spec,Other,multi-spec,https://clojuredocs.org/clojure_core/clojure.spec.alpha/multi-spec
+"Docs, Spec, Metadata",Spec,Other,fspec,https://clojuredocs.org/clojure_core/clojure.spec.alpha/fspec
+"Docs, Spec, Metadata",Spec,Other,conformer,https://clojuredocs.org/clojure_core/clojure.spec.alpha/conformer
+"Docs, Spec, Metadata",Spec,Custom explain,explain-printer,https://clojuredocs.org/clojure_core/clojure.spec.alpha/explain-printer
+"Docs, Spec, Metadata",Spec,Custom explain,*explain-out*,https://clojuredocs.org/clojure_core/clojure.spec.alpha/*explain-out*
+"Functions, Predicates, Transducers",Predicates,Numbers,number?,https://clojuredocs.org/clojure_core/clojure.core/number_q
+"Functions, Predicates, Transducers",Predicates,Numbers,rational?,https://clojuredocs.org/clojure_core/clojure.core/rational_q
+"Functions, Predicates, Transducers",Predicates,Numbers,integer?,https://clojuredocs.org/clojure_core/clojure.core/integer_q
+"Functions, Predicates, Transducers",Predicates,Numbers,ratio?,https://clojuredocs.org/clojure_core/clojure.core/ratio_q
+"Functions, Predicates, Transducers",Predicates,Numbers,decimal?,https://clojuredocs.org/clojure_core/clojure.core/decimal_q
+"Functions, Predicates, Transducers",Predicates,Numbers,float?,https://clojuredocs.org/clojure_core/clojure.core/float_q
+"Functions, Predicates, Transducers",Predicates,Numbers,zero?,https://clojuredocs.org/clojure_core/clojure.core/zero_q
+"Functions, Predicates, Transducers",Predicates,Numbers,double?,https://clojuredocs.org/clojure_core/clojure.core/double_q
+"Functions, Predicates, Transducers",Predicates,Numbers,int?,https://clojuredocs.org/clojure_core/clojure.core/int_q
+"Functions, Predicates, Transducers",Predicates,Numbers,nat-int?,https://clojuredocs.org/clojure_core/clojure.core/nat-int_q
+"Functions, Predicates, Transducers",Predicates,Numbers,neg-int?,https://clojuredocs.org/clojure_core/clojure.core/neg-int_q
+"Functions, Predicates, Transducers",Predicates,Numbers,pos-int?,https://clojuredocs.org/clojure_core/clojure.core/pos-int_q
+"Functions, Predicates, Transducers",Predicates,"Symbols, keywords",keyword?,https://clojuredocs.org/clojure_core/clojure.core/keyword_q
+"Functions, Predicates, Transducers",Predicates,"Symbols, keywords",symbol?,https://clojuredocs.org/clojure_core/clojure.core/symbol_q
+"Functions, Predicates, Transducers",Predicates,"Symbols, keywords",ident?,https://clojuredocs.org/clojure_core/clojure.core/ident_q
+"Functions, Predicates, Transducers",Predicates,"Symbols, keywords",qualified-ident?,https://clojuredocs.org/clojure_core/clojure.core/qualified-ident_q
+"Functions, Predicates, Transducers",Predicates,"Symbols, keywords",qualified-keyword?,https://clojuredocs.org/clojure_core/clojure.core/qualified-keyword_q
+"Functions, Predicates, Transducers",Predicates,"Symbols, keywords",qualified-symbol?,https://clojuredocs.org/clojure_core/clojure.core/qualified-symbol_q
+"Functions, Predicates, Transducers",Predicates,"Symbols, keywords",simple-ident?,https://clojuredocs.org/clojure_core/clojure.core/simple-ident_q
+"Functions, Predicates, Transducers",Predicates,"Symbols, keywords",simple-keyword?,https://clojuredocs.org/clojure_core/clojure.core/simple-keyword_q
+"Functions, Predicates, Transducers",Predicates,"Symbols, keywords",simple-symbol?,https://clojuredocs.org/clojure_core/clojure.core/simple-symbol_q
+"Functions, Predicates, Transducers",Predicates,Other scalars,string?,https://clojuredocs.org/clojure_core/clojure.core/string_q
+"Functions, Predicates, Transducers",Predicates,Other scalars,true?,https://clojuredocs.org/clojure_core/clojure.core/true_q
+"Functions, Predicates, Transducers",Predicates,Other scalars,false?,https://clojuredocs.org/clojure_core/clojure.core/false_q
+"Functions, Predicates, Transducers",Predicates,Other scalars,nil?,https://clojuredocs.org/clojure_core/clojure.core/nil_q
+"Functions, Predicates, Transducers",Predicates,Other scalars,some?,https://clojuredocs.org/clojure_core/clojure.core/some_q
+"Functions, Predicates, Transducers",Predicates,Other scalars,boolean?,https://clojuredocs.org/clojure_core/clojure.core/boolean_q
+"Functions, Predicates, Transducers",Predicates,Other scalars,bytes?,https://clojuredocs.org/clojure_core/clojure.core/bytes_q
+"Functions, Predicates, Transducers",Predicates,Other scalars,inst?,https://clojuredocs.org/clojure_core/clojure.core/inst_q
+"Functions, Predicates, Transducers",Predicates,Other scalars,uri?,https://clojuredocs.org/clojure_core/clojure.core/uri_q
+"Functions, Predicates, Transducers",Predicates,Other scalars,uuid?,https://clojuredocs.org/clojure_core/clojure.core/uuid_q
+"Functions, Predicates, Transducers",Predicates,Collections,list?,https://clojuredocs.org/clojure_core/clojure.core/list_q
+"Functions, Predicates, Transducers",Predicates,Collections,map?,https://clojuredocs.org/clojure_core/clojure.core/map_q
+"Functions, Predicates, Transducers",Predicates,Collections,set?,https://clojuredocs.org/clojure_core/clojure.core/set_q
+"Functions, Predicates, Transducers",Predicates,Collections,vector?,https://clojuredocs.org/clojure_core/clojure.core/vector_q
+"Functions, Predicates, Transducers",Predicates,Collections,associative?,https://clojuredocs.org/clojure_core/clojure.core/associative_q
+"Functions, Predicates, Transducers",Predicates,Collections,coll?,https://clojuredocs.org/clojure_core/clojure.core/coll_q
+"Functions, Predicates, Transducers",Predicates,Collections,sequential?,https://clojuredocs.org/clojure_core/clojure.core/sequential_q
+"Functions, Predicates, Transducers",Predicates,Collections,seq?,https://clojuredocs.org/clojure_core/clojure.core/seq_q
+"Functions, Predicates, Transducers",Predicates,Collections,empty?,https://clojuredocs.org/clojure_core/clojure.core/empty_q
+"Functions, Predicates, Transducers",Predicates,Collections,indexed?,https://clojuredocs.org/clojure_core/clojure.core/indexed_q
+"Functions, Predicates, Transducers",Predicates,Collections,seqable?,https://clojuredocs.org/clojure_core/clojure.core/seqable_q
+"Functions, Predicates, Transducers",Predicates,Other,any?,https://clojuredocs.org/clojure_core/clojure.core/any_q
+"I/O, Vars, Namespaces, Loading",IO,to/from,spit,https://clojuredocs.org/clojure_core/clojure.core/spit
+"I/O, Vars, Namespaces, Loading",IO,to/from,slurp,https://clojuredocs.org/clojure_core/clojure.core/slurp
+"I/O, Vars, Namespaces, Loading",IO,to *out*,pr,https://clojuredocs.org/clojure_core/clojure.core/pr
+"I/O, Vars, Namespaces, Loading",IO,to *out*,prn,https://clojuredocs.org/clojure_core/clojure.core/prn
+"I/O, Vars, Namespaces, Loading",IO,to *out*,print,https://clojuredocs.org/clojure_core/clojure.core/print
+"I/O, Vars, Namespaces, Loading",IO,to *out*,printf,https://clojuredocs.org/clojure_core/clojure.core/printf
+"I/O, Vars, Namespaces, Loading",IO,to *out*,println,https://clojuredocs.org/clojure_core/clojure.core/println
+"I/O, Vars, Namespaces, Loading",IO,to *out*,newline,https://clojuredocs.org/clojure_core/clojure.core/newline
+"I/O, Vars, Namespaces, Loading",IO,to *out*,print-table,https://clojuredocs.org/clojure_core/clojure.pprint/print-table
+"I/O, Vars, Namespaces, Loading",IO,to writer,pprint,https://clojuredocs.org/clojure_core/clojure.pprint/pprint
+"I/O, Vars, Namespaces, Loading",IO,to writer,cl-format,https://clojuredocs.org/clojure_core/clojure.pprint/cl-format
+"I/O, Vars, Namespaces, Loading",IO,to string,format,https://clojuredocs.org/clojure_core/clojure.core/format
+"I/O, Vars, Namespaces, Loading",IO,to string,with-out-str,https://clojuredocs.org/clojure_core/clojure.core/with-out-str
+"I/O, Vars, Namespaces, Loading",IO,to string,pr-str,https://clojuredocs.org/clojure_core/clojure.core/pr-str
+"I/O, Vars, Namespaces, Loading",IO,to string,prn-str,https://clojuredocs.org/clojure_core/clojure.core/prn-str
+"I/O, Vars, Namespaces, Loading",IO,to string,print-str,https://clojuredocs.org/clojure_core/clojure.core/print-str
+"I/O, Vars, Namespaces, Loading",IO,to string,println-str,https://clojuredocs.org/clojure_core/clojure.core/println-str
+"I/O, Vars, Namespaces, Loading",IO,from *in*,read-line,https://clojuredocs.org/clojure_core/clojure.core/read-line
+"I/O, Vars, Namespaces, Loading",IO,from *in*,read,https://clojuredocs.org/clojure_core/clojure.edn/read
+"I/O, Vars, Namespaces, Loading",IO,from *in*,read,https://github.com/clojure/tools.reader
+"I/O, Vars, Namespaces, Loading",IO,from reader,line-seq,https://clojuredocs.org/clojure_core/clojure.core/line-seq
+"I/O, Vars, Namespaces, Loading",IO,from reader,read,https://clojuredocs.org/clojure_core/clojure.edn/read
+"I/O, Vars, Namespaces, Loading",IO,from reader,read,https://github.com/clojure/tools.reader
+"I/O, Vars, Namespaces, Loading",IO,to/from,java.io.Reader,https://docs.oracle.com/javase/8/docs/api/java/io/Reader.html
+"I/O, Vars, Namespaces, Loading",IO,from string,with-in-str,https://clojuredocs.org/clojure_core/clojure.core/with-in-str
+"I/O, Vars, Namespaces, Loading",IO,from string,read-string,https://clojuredocs.org/clojure_core/clojure.edn/read-string
+"I/O, Vars, Namespaces, Loading",IO,from string,read-string,https://github.com/clojure/tools.reader
+"I/O, Vars, Namespaces, Loading",IO,Open,with-open,https://clojuredocs.org/clojure_core/clojure.core/with-open
+"I/O, Vars, Namespaces, Loading",IO,Open,reader,https://clojuredocs.org/clojure_core/clojure.java.io/reader
+"I/O, Vars, Namespaces, Loading",IO,Open,writer,https://clojuredocs.org/clojure_core/clojure.java.io/writer
+"I/O, Vars, Namespaces, Loading",IO,Open,input-stream,https://clojuredocs.org/clojure_core/clojure.java.io/input-stream
+"I/O, Vars, Namespaces, Loading",IO,Open,output-stream,https://clojuredocs.org/clojure_core/clojure.java.io/output-stream
+"I/O, Vars, Namespaces, Loading",IO,Binary,java.io.OutputStream,https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html
+"I/O, Vars, Namespaces, Loading",IO,Binary,java.io.InputStream,https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html
+"I/O, Vars, Namespaces, Loading",IO,Binary,gloss,https://github.com/ztellman/gloss
+"I/O, Vars, Namespaces, Loading",IO,Binary,byte-spec,https://github.com/rosejn/byte-spec
+"I/O, Vars, Namespaces, Loading",IO,Misc,flush,https://clojuredocs.org/clojure_core/clojure.core/flush
+"I/O, Vars, Namespaces, Loading",IO,Misc,file-seq,https://clojuredocs.org/clojure_core/clojure.core/file-seq
+"I/O, Vars, Namespaces, Loading",IO,Misc,*in*,https://clojuredocs.org/clojure_core/clojure.core/*in*
+"I/O, Vars, Namespaces, Loading",IO,Misc,*out*,https://clojuredocs.org/clojure_core/clojure.core/*out*
+"I/O, Vars, Namespaces, Loading",IO,Misc,*err*,https://clojuredocs.org/clojure_core/clojure.core/*err*
+"I/O, Vars, Namespaces, Loading",IO,Misc,file,https://clojuredocs.org/clojure_core/clojure.java.io/file
+"I/O, Vars, Namespaces, Loading",IO,Misc,copy,https://clojuredocs.org/clojure_core/clojure.java.io/copy
+"I/O, Vars, Namespaces, Loading",IO,Misc,delete-file,https://clojuredocs.org/clojure_core/clojure.java.io/delete-file
+"I/O, Vars, Namespaces, Loading",IO,Misc,resource,https://clojuredocs.org/clojure_core/clojure.java.io/resource
+"I/O, Vars, Namespaces, Loading",IO,Misc,as-file,https://clojuredocs.org/clojure_core/clojure.java.io/as-file
+"I/O, Vars, Namespaces, Loading",IO,Misc,as-url,https://clojuredocs.org/clojure_core/clojure.java.io/as-url
+"I/O, Vars, Namespaces, Loading",IO,Misc,as-relative-path,https://clojuredocs.org/clojure_core/clojure.java.io/as-relative-path
+"I/O, Vars, Namespaces, Loading",IO,Misc,fs,https://github.com/funcool/fs
+"I/O, Vars, Namespaces, Loading",IO,Data readers,*data-readers*,https://clojuredocs.org/clojure_core/clojure.core/*data-readers*
+"I/O, Vars, Namespaces, Loading",IO,Data readers,default-data-readers,https://clojuredocs.org/clojure_core/clojure.core/default-data-readers
+"I/O, Vars, Namespaces, Loading",IO,Data readers,*default-data-reader-fn*,https://clojuredocs.org/clojure_core/clojure.core/*default-data-reader-fn*
+"I/O, Vars, Namespaces, Loading",IO,tap,tap>,https://clojure.github.io/clojure/clojure.core-api.html#clojure.core/tap%3E
+"I/O, Vars, Namespaces, Loading",IO,tap,add-tap,https://clojure.github.io/clojure/clojure.core-api.html#clojure.core/add-tap
+"I/O, Vars, Namespaces, Loading",IO,tap,remove-tap,https://clojure.github.io/clojure/clojure.core-api.html#clojure.core/remove-tap
+"Functions, Predicates, Transducers",Functions,Create,fn,https://clojuredocs.org/clojure_core/clojure.core/fn
+"Functions, Predicates, Transducers",Functions,Create,defn,https://clojuredocs.org/clojure_core/clojure.core/defn
+"Functions, Predicates, Transducers",Functions,Create,defn-,https://clojuredocs.org/clojure_core/clojure.core/defn-
+"Functions, Predicates, Transducers",Functions,Create,definline,https://clojuredocs.org/clojure_core/clojure.core/definline
+"Functions, Predicates, Transducers",Functions,Create,identity,https://clojuredocs.org/clojure_core/clojure.core/identity
+"Functions, Predicates, Transducers",Functions,Create,constantly,https://clojuredocs.org/clojure_core/clojure.core/constantly
+"Functions, Predicates, Transducers",Functions,Create,memfn,https://clojuredocs.org/clojure_core/clojure.core/memfn
+"Functions, Predicates, Transducers",Functions,Create,comp,https://clojuredocs.org/clojure_core/clojure.core/comp
+"Functions, Predicates, Transducers",Functions,Create,complement,https://clojuredocs.org/clojure_core/clojure.core/complement
+"Functions, Predicates, Transducers",Functions,Create,partial,https://clojuredocs.org/clojure_core/clojure.core/partial
+"Functions, Predicates, Transducers",Functions,Create,juxt,https://clojuredocs.org/clojure_core/clojure.core/juxt
+"Functions, Predicates, Transducers",Functions,Create,memoize,https://clojuredocs.org/clojure_core/clojure.core/memoize
+"Functions, Predicates, Transducers",Functions,Create,fnil,https://clojuredocs.org/clojure_core/clojure.core/fnil
+"Functions, Predicates, Transducers",Functions,Create,every-pred,https://clojuredocs.org/clojure_core/clojure.core/every-pred
+"Functions, Predicates, Transducers",Functions,Create,some-fn,https://clojuredocs.org/clojure_core/clojure.core/some-fn
+"Functions, Predicates, Transducers",Functions,Call,apply,https://clojuredocs.org/clojure_core/clojure.core/apply
+"Functions, Predicates, Transducers",Functions,Call,->,https://clojuredocs.org/clojure_core/clojure.core/-%3E
+"Functions, Predicates, Transducers",Functions,Call,->>,https://clojuredocs.org/clojure_core/clojure.core/-%3E%3E
+"Functions, Predicates, Transducers",Functions,Call,trampoline,https://clojuredocs.org/clojure_core/clojure.core/trampoline
+"Functions, Predicates, Transducers",Functions,Call,as->,https://clojuredocs.org/clojure_core/clojure.core/as-%3E
+"Functions, Predicates, Transducers",Functions,Call,cond->,https://clojuredocs.org/clojure_core/clojure.core/cond-%3E
+"Functions, Predicates, Transducers",Functions,Call,cond->>,https://clojuredocs.org/clojure_core/clojure.core/cond-%3E%3E
+"Functions, Predicates, Transducers",Functions,Call,some->,https://clojuredocs.org/clojure_core/clojure.core/some-%3E
+"Functions, Predicates, Transducers",Functions,Call,some->>,https://clojuredocs.org/clojure_core/clojure.core/some-%3E%3E
+"Functions, Predicates, Transducers",Functions,Test,fn?,https://clojuredocs.org/clojure_core/clojure.core/fn_q
+"Functions, Predicates, Transducers",Functions,Test,ifn?,https://clojuredocs.org/clojure_core/clojure.core/ifn_q
+"Protocols, Records, Types, Multimethods",Types,Guide,Clojure type selection flowchart,https://github.com/cemerick/clojure-type-selection-flowchart
+"Protocols, Records, Types, Multimethods",Protocols,Guide,clojure.org/reference/protocols,https://clojure.org/reference/protocols
+"Protocols, Records, Types, Multimethods",Protocols,Define,defprotocol,https://clojuredocs.org/clojure_core/clojure.core/defprotocol
+"Protocols, Records, Types, Multimethods",Protocols,Extend,extend-type,https://clojuredocs.org/clojure_core/clojure.core/extend-type
+"Protocols, Records, Types, Multimethods",Protocols,Extend null,extend-type,https://clojuredocs.org/clojure_core/clojure.core/extend-type
+"Protocols, Records, Types, Multimethods",Protocols,Reify,reify,https://clojuredocs.org/clojure_core/clojure.core/reify
+"Protocols, Records, Types, Multimethods",Protocols,Test,satisfies?,https://clojuredocs.org/clojure_core/clojure.core/satisfies_q
+"Protocols, Records, Types, Multimethods",Protocols,Test,extends?,https://clojuredocs.org/clojure_core/clojure.core/extends_q
+"Protocols, Records, Types, Multimethods",Protocols,Other,extend,https://clojuredocs.org/clojure_core/clojure.core/extend
+"Protocols, Records, Types, Multimethods",Protocols,Other,extend-protocol,https://clojuredocs.org/clojure_core/clojure.core/extend-protocol
+"Protocols, Records, Types, Multimethods",Protocols,Other,extenders,https://clojuredocs.org/clojure_core/clojure.core/extenders
+"Protocols, Records, Types, Multimethods",Records,Guide,clojure.org/reference/datatypes,https://clojure.org/reference/datatypes
+"Protocols, Records, Types, Multimethods",Records,Define,defrecord,https://clojuredocs.org/clojure_core/clojure.core/defrecord
+"Protocols, Records, Types, Multimethods",Records,Test,record?,https://clojuredocs.org/clojure_core/clojure.core/record_q
+"Protocols, Records, Types, Multimethods",Types,Guide,clojure.org/reference/datatypes,https://clojure.org/reference/datatypes
+"Protocols, Records, Types, Multimethods",Types,Define,deftype,https://clojuredocs.org/clojure_core/clojure.core/deftype
+"Protocols, Records, Types, Multimethods",Types,With methods,deftype,https://clojuredocs.org/clojure_core/clojure.core/deftype
+"Protocols, Records, Types, Multimethods",Multimethods,Guide,clojure.org/reference/multimethods,https://clojure.org/reference/multimethods
+"Protocols, Records, Types, Multimethods",Multimethods,Define,defmulti,https://clojuredocs.org/clojure_core/clojure.core/defmulti
+"Protocols, Records, Types, Multimethods",Multimethods,Method define,defmethod,https://clojuredocs.org/clojure_core/clojure.core/defmethod
+"Protocols, Records, Types, Multimethods",Multimethods,Dispatch,get-method,https://clojuredocs.org/clojure_core/clojure.core/get-method
+"Protocols, Records, Types, Multimethods",Multimethods,Dispatch,methods,https://clojuredocs.org/clojure_core/clojure.core/methods
+"Protocols, Records, Types, Multimethods",Multimethods,Remove,remove-method,https://clojuredocs.org/clojure_core/clojure.core/remove-method
+"Protocols, Records, Types, Multimethods",Multimethods,Remove,remove-all-methods,https://clojuredocs.org/clojure_core/clojure.core/remove-all-methods
+"Protocols, Records, Types, Multimethods",Multimethods,Prefer,prefer-method,https://clojuredocs.org/clojure_core/clojure.core/prefer-method
+"Protocols, Records, Types, Multimethods",Multimethods,Prefer,prefers,https://clojuredocs.org/clojure_core/clojure.core/prefers
+"Protocols, Records, Types, Multimethods",Multimethods,Relation,derive,https://clojuredocs.org/clojure_core/clojure.core/derive
+"Protocols, Records, Types, Multimethods",Multimethods,Relation,underive,https://clojuredocs.org/clojure_core/clojure.core/underive
+"Protocols, Records, Types, Multimethods",Multimethods,Relation,isa?,https://clojuredocs.org/clojure_core/clojure.core/isa_q
+"Protocols, Records, Types, Multimethods",Multimethods,Relation,parents,https://clojuredocs.org/clojure_core/clojure.core/parents
+"Protocols, Records, Types, Multimethods",Multimethods,Relation,ancestors,https://clojuredocs.org/clojure_core/clojure.core/ancestors
+"Protocols, Records, Types, Multimethods",Multimethods,Relation,descendants,https://clojuredocs.org/clojure_core/clojure.core/descendants
+"Protocols, Records, Types, Multimethods",Multimethods,Relation,make-hierarchy,https://clojuredocs.org/clojure_core/clojure.core/make-hierarchy
+"Protocols, Records, Types, Multimethods",Protocols,Datafy,Guide,https://corfield.org/blog/2018/12/03/datafy-nav
+"Protocols, Records, Types, Multimethods",Protocols,Datafy,datafy,https://clojure.github.io/clojure/clojure.datafy-api.html#clojure.datafy/datafy
+"Protocols, Records, Types, Multimethods",Protocols,Datafy,nav,https://clojure.github.io/clojure/clojure.datafy-api.html#clojure.datafy/nav
+"Macros, Special Forms, Special Characters",Macros,Create,defmacro,https://clojuredocs.org/clojure_core/clojure.core/defmacro
+"Macros, Special Forms, Special Characters",Macros,Create,definline,https://clojuredocs.org/clojure_core/clojure.core/definline
+"Macros, Special Forms, Special Characters",Macros,Debug,macroexpand-1,https://clojuredocs.org/clojure_core/clojure.core/macroexpand-1
+"Macros, Special Forms, Special Characters",Macros,Debug,macroexpand,https://clojuredocs.org/clojure_core/clojure.core/macroexpand
+"Macros, Special Forms, Special Characters",Macros,Debug,macroexpand-all,https://clojuredocs.org/clojure_core/clojure.walk/macroexpand-all
+"Macros, Special Forms, Special Characters",Macros,Branch,and,https://clojuredocs.org/clojure_core/clojure.core/and
+"Macros, Special Forms, Special Characters",Macros,Branch,or,https://clojuredocs.org/clojure_core/clojure.core/or
+"Macros, Special Forms, Special Characters",Macros,Branch,when,https://clojuredocs.org/clojure_core/clojure.core/when
+"Macros, Special Forms, Special Characters",Macros,Branch,when-not,https://clojuredocs.org/clojure_core/clojure.core/when-not
+"Macros, Special Forms, Special Characters",Macros,Branch,when-let,https://clojuredocs.org/clojure_core/clojure.core/when-let
+"Macros, Special Forms, Special Characters",Macros,Branch,when-first,https://clojuredocs.org/clojure_core/clojure.core/when-first
+"Macros, Special Forms, Special Characters",Macros,Branch,if-not,https://clojuredocs.org/clojure_core/clojure.core/if-not
+"Macros, Special Forms, Special Characters",Macros,Branch,if-let,https://clojuredocs.org/clojure_core/clojure.core/if-let
+"Macros, Special Forms, Special Characters",Macros,Branch,cond,https://clojuredocs.org/clojure_core/clojure.core/cond
+"Macros, Special Forms, Special Characters",Macros,Branch,condp,https://clojuredocs.org/clojure_core/clojure.core/condp
+"Macros, Special Forms, Special Characters",Macros,Branch,case,https://clojuredocs.org/clojure_core/clojure.core/case
+"Macros, Special Forms, Special Characters",Macros,Branch,when-some,https://clojuredocs.org/clojure_core/clojure.core/when-some
+"Macros, Special Forms, Special Characters",Macros,Branch,if-some,https://clojuredocs.org/clojure_core/clojure.core/if-some
+"Macros, Special Forms, Special Characters",Macros,Loop,for,https://clojuredocs.org/clojure_core/clojure.core/for
+"Macros, Special Forms, Special Characters",Macros,Loop,doseq,https://clojuredocs.org/clojure_core/clojure.core/doseq
+"Macros, Special Forms, Special Characters",Macros,Loop,dotimes,https://clojuredocs.org/clojure_core/clojure.core/dotimes
+"Macros, Special Forms, Special Characters",Macros,Loop,while,https://clojuredocs.org/clojure_core/clojure.core/while
+"Macros, Special Forms, Special Characters",Macros,Arrange,..,https://clojuredocs.org/clojure_core/clojure.core/_dot_dot
+"Macros, Special Forms, Special Characters",Macros,Arrange,doto,https://clojuredocs.org/clojure_core/clojure.core/doto
+"Macros, Special Forms, Special Characters",Macros,Arrange,->,https://clojuredocs.org/clojure_core/clojure.core/-%3E
+"Macros, Special Forms, Special Characters",Macros,Arrange,->>,https://clojuredocs.org/clojure_core/clojure.core/-%3E%3E
+"Macros, Special Forms, Special Characters",Macros,Arrange,as->,https://clojuredocs.org/clojure_core/clojure.core/as-%3E
+"Macros, Special Forms, Special Characters",Macros,Arrange,cond->,https://clojuredocs.org/clojure_core/clojure.core/cond-%3E
+"Macros, Special Forms, Special Characters",Macros,Arrange,cond->>,https://clojuredocs.org/clojure_core/clojure.core/cond-%3E%3E
+"Macros, Special Forms, Special Characters",Macros,Arrange,some->,https://clojuredocs.org/clojure_core/clojure.core/some-%3E
+"Macros, Special Forms, Special Characters",Macros,Arrange,some->>,https://clojuredocs.org/clojure_core/clojure.core/some-%3E%3E
+"Macros, Special Forms, Special Characters",Macros,Scope,binding,https://clojuredocs.org/clojure_core/clojure.core/binding
+"Macros, Special Forms, Special Characters",Macros,Scope,locking,https://clojuredocs.org/clojure_core/clojure.core/locking
+"Macros, Special Forms, Special Characters",Macros,Scope,time,https://clojuredocs.org/clojure_core/clojure.core/time
+"Macros, Special Forms, Special Characters",Macros,Scope,with-in-str,https://clojuredocs.org/clojure_core/clojure.core/with-in-str
+"Macros, Special Forms, Special Characters",Macros,Scope,with-local-vars,https://clojuredocs.org/clojure_core/clojure.core/with-local-vars
+"Macros, Special Forms, Special Characters",Macros,Scope,with-open,https://clojuredocs.org/clojure_core/clojure.core/with-open
+"Macros, Special Forms, Special Characters",Macros,Scope,with-out-str,https://clojuredocs.org/clojure_core/clojure.core/with-out-str
+"Macros, Special Forms, Special Characters",Macros,Scope,with-precision,https://clojuredocs.org/clojure_core/clojure.core/with-precision
+"Macros, Special Forms, Special Characters",Macros,Scope,with-redefs,https://clojuredocs.org/clojure_core/clojure.core/with-redefs
+"Macros, Special Forms, Special Characters",Macros,Scope,with-redefs-fn,https://clojuredocs.org/clojure_core/clojure.core/with-redefs-fn
+"Macros, Special Forms, Special Characters",Macros,Lazy,lazy-cat,https://clojuredocs.org/clojure_core/clojure.core/lazy-cat
+"Macros, Special Forms, Special Characters",Macros,Lazy,lazy-seq,https://clojuredocs.org/clojure_core/clojure.core/lazy-seq
+"Macros, Special Forms, Special Characters",Macros,Lazy,delay,https://clojuredocs.org/clojure_core/clojure.core/delay
+"Macros, Special Forms, Special Characters",Macros,Doc,assert,https://clojuredocs.org/clojure_core/clojure.core/assert
+"Macros, Special Forms, Special Characters",Macros,Doc,comment,https://clojuredocs.org/clojure_core/clojure.core/comment
+"Macros, Special Forms, Special Characters",Macros,Doc,doc,https://clojuredocs.org/clojure_core/clojure.repl/doc
+"Macros, Special Forms, Special Characters",Special Characters,Reference,clojure.org/reference/reader,https://clojure.org/reference/reader#macrochars
+"Macros, Special Forms, Special Characters",Special Characters,Guide,guide,https://clojure.org/guides/weird_characters
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,quote,https://clojure.org/reference/reader#_quote
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,quote,https://clojuredocs.org/clojure_core/clojure.core/quote
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,dynamic vars,https://clojure.org/reference/vars
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,deref,https://clojuredocs.org/clojure_core/clojure.core/deref
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,Syntax-quote,https://clojure.org/reference/reader#syntax-quote
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,auto-gensym',https://clojure.org/reference/reader#syntax-quote
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,Unquote,https://clojure.org/reference/reader#syntax-quote
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,Unquote-splicing,https://clojure.org/reference/reader#syntax-quote
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,->,https://clojuredocs.org/clojure_core/clojure.core/-%3E
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,->>,https://clojuredocs.org/clojure_core/clojure.core/-%3E%3E
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,core.async channel macros,https://clojure.org/guides/weird_characters#__code_code_code_code_code_code_and_code_code_core_async_channel_macros
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,>!!,https://github.com/clojure/core.async
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,,https://github.com/clojure/core.async
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,>!,https://github.com/clojure/core.async
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,,https://github.com/clojure/core.async
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,var,https://clojuredocs.org/clojure_core/clojure.core/var
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,Anonymous function literal,https://clojure.org/reference/reader#_dispatch
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,Anonymous function argument,https://clojure.org/reference/reader#_dispatch
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,Reader conditional,https://clojure.org/reference/reader#_reader_conditionals
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,Splicing reader conditional,https://clojure.org/reference/reader#_reader_conditionals
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,tagged literal,https://clojure.org/reference/reader#tagged_literals
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,map namespace syntax,https://clojure.org/reference/reader#map_namespace_syntax
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,zero?,https://clojuredocs.org/clojure_core/clojure.core/zero_q
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,vector?,https://clojuredocs.org/clojure_core/clojure.core/vector_q
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,instance?,https://clojuredocs.org/clojure_core/clojure.core/instance_q
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,set!,https://clojuredocs.org/clojure_core/clojure.core/set!
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,swap!,https://clojuredocs.org/clojure_core/clojure.core/swap%21
+"Macros, Special Forms, Special Characters",Special Characters,Special Characters,alter-meta!,https://clojuredocs.org/clojure_core/clojure.core/alter-meta%21
+"Docs, Spec, Metadata",Metadata,Guide,clojure.org/reference/reader,https://clojure.org/reference/reader#_metadata
+"Docs, Spec, Metadata",Metadata,On vars,meta,https://clojuredocs.org/clojure_core/clojure.core/meta
+"Docs, Spec, Metadata",Metadata,On vars,with-meta,https://clojuredocs.org/clojure_core/clojure.core/with-meta
+"Docs, Spec, Metadata",Metadata,On vars,vary-meta,https://clojuredocs.org/clojure_core/clojure.core/vary-meta
+"Docs, Spec, Metadata",Metadata,On vars,alter-meta!,https://clojuredocs.org/clojure_core/clojure.core/alter-meta%21
+"Docs, Spec, Metadata",Metadata,On vars,reset-meta!,https://clojuredocs.org/clojure_core/clojure.core/reset-meta%21
+"Docs, Spec, Metadata",Metadata,On vars,doc,https://clojuredocs.org/clojure_core/clojure.repl/doc
+"Docs, Spec, Metadata",Metadata,On vars,find-doc,https://clojuredocs.org/clojure_core/clojure.repl/find-doc
+"Docs, Spec, Metadata",Metadata,On vars,test,https://clojuredocs.org/clojure_core/clojure.core/test
+"Macros, Special Forms, Special Characters",Special Forms,Guide,clojure.org/reference/special_forms,https://clojure.org/reference/special_forms
+"Macros, Special Forms, Special Characters",Special Forms,Special Forms,def,https://clojuredocs.org/clojure_core/clojure.core/def
+"Macros, Special Forms, Special Characters",Special Forms,Special Forms,if,https://clojuredocs.org/clojure_core/clojure.core/if
+"Macros, Special Forms, Special Characters",Special Forms,Special Forms,do,https://clojuredocs.org/clojure_core/clojure.core/do
+"Macros, Special Forms, Special Characters",Special Forms,Special Forms,let,https://clojuredocs.org/clojure_core/clojure.core/let
+"Macros, Special Forms, Special Characters",Special Forms,Special Forms,letfn,https://clojuredocs.org/clojure_core/clojure.core/letfn
+"Macros, Special Forms, Special Characters",Special Forms,Special Forms,quote,https://clojuredocs.org/clojure_core/clojure.core/quote
+"Macros, Special Forms, Special Characters",Special Forms,Special Forms,var,https://clojuredocs.org/clojure_core/clojure.core/var
+"Macros, Special Forms, Special Characters",Special Forms,Special Forms,fn,https://clojuredocs.org/clojure_core/clojure.core/fn
+"Macros, Special Forms, Special Characters",Special Forms,Special Forms,loop,https://clojuredocs.org/clojure_core/clojure.core/loop
+"Macros, Special Forms, Special Characters",Special Forms,Special Forms,recur,https://clojuredocs.org/clojure_core/clojure.core/recur
+"Macros, Special Forms, Special Characters",Special Forms,Special Forms,set!,https://clojuredocs.org/clojure_core/clojure.core/set!
+"Macros, Special Forms, Special Characters",Special Forms,Special Forms,throw,https://clojuredocs.org/clojure_core/clojure.core/throw
+"Macros, Special Forms, Special Characters",Special Forms,Special Forms,try,https://clojuredocs.org/clojure_core/clojure.core/try
+"Macros, Special Forms, Special Characters",Special Forms,Special Forms,monitor-enter,https://clojuredocs.org/clojure_core/clojure.core/monitor-enter
+"Macros, Special Forms, Special Characters",Special Forms,Special Forms,monitor-exit,https://clojuredocs.org/clojure_core/clojure.core/monitor-exit
+"Macros, Special Forms, Special Characters",Special Forms,"Binding Forms, Destructuring",examples,https://clojure.org/reference/special_forms#binding-forms
+"Macros, Special Forms, Special Characters",Special Forms,"Binding Forms, Destructuring",let,https://clojuredocs.org/clojure_core/clojure.core/let
+"Macros, Special Forms, Special Characters",Special Forms,"Binding Forms, Destructuring",fn,https://clojuredocs.org/clojure_core/clojure.core/fn
+"Macros, Special Forms, Special Characters",Special Forms,"Binding Forms, Destructuring",defn,https://clojuredocs.org/clojure_core/clojure.core/defn
+"Macros, Special Forms, Special Characters",Special Forms,"Binding Forms, Destructuring",defmacro,https://clojuredocs.org/clojure_core/clojure.core/defmacro
+"Macros, Special Forms, Special Characters",Special Forms,"Binding Forms, Destructuring",loop,https://clojuredocs.org/clojure_core/clojure.core/loop
+"Macros, Special Forms, Special Characters",Special Forms,"Binding Forms, Destructuring",for,https://clojuredocs.org/clojure_core/clojure.core/for
+"Macros, Special Forms, Special Characters",Special Forms,"Binding Forms, Destructuring",doseq,https://clojuredocs.org/clojure_core/clojure.core/doseq
+"Macros, Special Forms, Special Characters",Special Forms,"Binding Forms, Destructuring",if-let,https://clojuredocs.org/clojure_core/clojure.core/if-let
+"Macros, Special Forms, Special Characters",Special Forms,"Binding Forms, Destructuring",when-let,https://clojuredocs.org/clojure_core/clojure.core/when-let
+"Macros, Special Forms, Special Characters",Special Forms,"Binding Forms, Destructuring",if-some,https://clojuredocs.org/clojure_core/clojure.core/if-some
+"Macros, Special Forms, Special Characters",Special Forms,"Binding Forms, Destructuring",when-some,https://clojuredocs.org/clojure_core/clojure.core/when-some
+"I/O, Vars, Namespaces, Loading",Vars,Guide,clojure.org/reference/vars,https://clojure.org/reference/vars
+"I/O, Vars, Namespaces, Loading",Vars,Def variants,def,https://clojuredocs.org/clojure_core/clojure.core/def
+"I/O, Vars, Namespaces, Loading",Vars,Def variants,defn,https://clojuredocs.org/clojure_core/clojure.core/defn
+"I/O, Vars, Namespaces, Loading",Vars,Def variants,defn-,https://clojuredocs.org/clojure_core/clojure.core/defn-
+"I/O, Vars, Namespaces, Loading",Vars,Def variants,definline,https://clojuredocs.org/clojure_core/clojure.core/definline
+"I/O, Vars, Namespaces, Loading",Vars,Def variants,defmacro,https://clojuredocs.org/clojure_core/clojure.core/defmacro
+"I/O, Vars, Namespaces, Loading",Vars,Def variants,defmethod,https://clojuredocs.org/clojure_core/clojure.core/defmethod
+"I/O, Vars, Namespaces, Loading",Vars,Def variants,defmulti,https://clojuredocs.org/clojure_core/clojure.core/defmulti
+"I/O, Vars, Namespaces, Loading",Vars,Def variants,defonce,https://clojuredocs.org/clojure_core/clojure.core/defonce
+"I/O, Vars, Namespaces, Loading",Vars,Def variants,defrecord,https://clojuredocs.org/clojure_core/clojure.core/defrecord
+"I/O, Vars, Namespaces, Loading",Vars,Interned vars,declare,https://clojuredocs.org/clojure_core/clojure.core/declare
+"I/O, Vars, Namespaces, Loading",Vars,Interned vars,intern,https://clojuredocs.org/clojure_core/clojure.core/intern
+"I/O, Vars, Namespaces, Loading",Vars,Interned vars,binding,https://clojuredocs.org/clojure_core/clojure.core/binding
+"I/O, Vars, Namespaces, Loading",Vars,Interned vars,find-var,https://clojuredocs.org/clojure_core/clojure.core/find-var
+"I/O, Vars, Namespaces, Loading",Vars,Interned vars,var,https://clojuredocs.org/clojure_core/clojure.core/var
+"I/O, Vars, Namespaces, Loading",Vars,Var objects,with-local-vars,https://clojuredocs.org/clojure_core/clojure.core/with-local-vars
+"I/O, Vars, Namespaces, Loading",Vars,Var objects,var-get,https://clojuredocs.org/clojure_core/clojure.core/var-get
+"I/O, Vars, Namespaces, Loading",Vars,Var objects,var-set,https://clojuredocs.org/clojure_core/clojure.core/var-set
+"I/O, Vars, Namespaces, Loading",Vars,Var objects,alter-var-root,https://clojuredocs.org/clojure_core/clojure.core/alter-var-root
+"I/O, Vars, Namespaces, Loading",Vars,Var objects,var?,https://clojuredocs.org/clojure_core/clojure.core/var_q
+"I/O, Vars, Namespaces, Loading",Vars,Var objects,bound?,https://clojuredocs.org/clojure_core/clojure.core/bound_q
+"I/O, Vars, Namespaces, Loading",Vars,Var objects,thread-bound?,https://clojuredocs.org/clojure_core/clojure.core/thread-bound_q
+"I/O, Vars, Namespaces, Loading",Vars,Var validators,set-validator!,https://clojuredocs.org/clojure_core/clojure.core/set-validator%21
+"I/O, Vars, Namespaces, Loading",Vars,Var validators,get-validator,https://clojuredocs.org/clojure_core/clojure.core/get-validator
+"I/O, Vars, Namespaces, Loading",Namespaces,Current,*ns*,https://clojuredocs.org/clojure_core/clojure.core/*ns*
+"I/O, Vars, Namespaces, Loading",Namespaces,Create/Switch,tutorial,https://blog.8thlight.com/colin-jones/2010/12/05/clojure-libs-and-namespaces-require-use-import-and-ns.html
+"I/O, Vars, Namespaces, Loading",Namespaces,Create/Switch,ns,https://clojuredocs.org/clojure_core/clojure.core/ns
+"I/O, Vars, Namespaces, Loading",Namespaces,Create/Switch,in-ns,https://clojuredocs.org/clojure_core/clojure.core/in-ns
+"I/O, Vars, Namespaces, Loading",Namespaces,Create/Switch,create-ns,https://clojuredocs.org/clojure_core/clojure.core/create-ns
+"I/O, Vars, Namespaces, Loading",Namespaces,Add,alias,https://clojuredocs.org/clojure_core/clojure.core/alias
+"I/O, Vars, Namespaces, Loading",Namespaces,Add,def,https://clojuredocs.org/clojure_core/clojure.core/def
+"I/O, Vars, Namespaces, Loading",Namespaces,Add,import,https://clojuredocs.org/clojure_core/clojure.core/import
+"I/O, Vars, Namespaces, Loading",Namespaces,Add,intern,https://clojuredocs.org/clojure_core/clojure.core/intern
+"I/O, Vars, Namespaces, Loading",Namespaces,Add,refer,https://clojuredocs.org/clojure_core/clojure.core/refer
+"I/O, Vars, Namespaces, Loading",Namespaces,Find,all-ns,https://clojuredocs.org/clojure_core/clojure.core/all-ns
+"I/O, Vars, Namespaces, Loading",Namespaces,Find,find-ns,https://clojuredocs.org/clojure_core/clojure.core/find-ns
+"I/O, Vars, Namespaces, Loading",Namespaces,Examine,ns-name,https://clojuredocs.org/clojure_core/clojure.core/ns-name
+"I/O, Vars, Namespaces, Loading",Namespaces,Examine,ns-aliases,https://clojuredocs.org/clojure_core/clojure.core/ns-aliases
+"I/O, Vars, Namespaces, Loading",Namespaces,Examine,ns-map,https://clojuredocs.org/clojure_core/clojure.core/ns-map
+"I/O, Vars, Namespaces, Loading",Namespaces,Examine,ns-interns,https://clojuredocs.org/clojure_core/clojure.core/ns-interns
+"I/O, Vars, Namespaces, Loading",Namespaces,From symbol,ns-publics,https://clojuredocs.org/clojure_core/clojure.core/ns-publics
+"I/O, Vars, Namespaces, Loading",Namespaces,From symbol,ns-refers,https://clojuredocs.org/clojure_core/clojure.core/ns-refers
+"I/O, Vars, Namespaces, Loading",Namespaces,From symbol,ns-imports,https://clojuredocs.org/clojure_core/clojure.core/ns-imports
+"I/O, Vars, Namespaces, Loading",Namespaces,From symbol,resolve,https://clojuredocs.org/clojure_core/clojure.core/resolve
+"I/O, Vars, Namespaces, Loading",Namespaces,From symbol,ns-resolve,https://clojuredocs.org/clojure_core/clojure.core/ns-resolve
+"I/O, Vars, Namespaces, Loading",Namespaces,From symbol,namespace,https://clojuredocs.org/clojure_core/clojure.core/namespace
+"I/O, Vars, Namespaces, Loading",Namespaces,From symbol,the-ns,https://clojuredocs.org/clojure_core/clojure.core/the-ns
+"I/O, Vars, Namespaces, Loading",Namespaces,From symbol,requiring-resolve,https://clojure.github.io/clojure/clojure.core-api.html#clojure.core/requiring-resolve
+"I/O, Vars, Namespaces, Loading",Namespaces,Remove,ns-unalias,https://clojuredocs.org/clojure_core/clojure.core/ns-unalias
+"I/O, Vars, Namespaces, Loading",Namespaces,Remove,ns-unmap,https://clojuredocs.org/clojure_core/clojure.core/ns-unmap
+"I/O, Vars, Namespaces, Loading",Namespaces,Remove,remove-ns,https://clojuredocs.org/clojure_core/clojure.core/remove-ns
+"I/O, Vars, Namespaces, Loading",Loading,Load libs,tutorial,https://blog.8thlight.com/colin-jones/2010/12/05/clojure-libs-and-namespaces-require-use-import-and-ns.html
+"I/O, Vars, Namespaces, Loading",Loading,Load libs,require,https://clojuredocs.org/clojure_core/clojure.core/require
+"I/O, Vars, Namespaces, Loading",Loading,Load libs,use,https://clojuredocs.org/clojure_core/clojure.core/use
+"I/O, Vars, Namespaces, Loading",Loading,Load libs,import,https://clojuredocs.org/clojure_core/clojure.core/import
+"I/O, Vars, Namespaces, Loading",Loading,Load libs,refer,https://clojuredocs.org/clojure_core/clojure.core/refer
+"I/O, Vars, Namespaces, Loading",Loading,List loaded,loaded libs,https://clojuredocs.org/clojure_core/clojure.core/loaded-libs
+"I/O, Vars, Namespaces, Loading",Loading,Load misc,load,https://clojuredocs.org/clojure_core/clojure.core/load
+"I/O, Vars, Namespaces, Loading",Loading,Load misc,load-file,https://clojuredocs.org/clojure_core/clojure.core/load-file
+"I/O, Vars, Namespaces, Loading",Loading,Load misc,load-reader,https://clojuredocs.org/clojure_core/clojure.core/load-reader
+"I/O, Vars, Namespaces, Loading",Loading,Load misc,load-string,https://clojuredocs.org/clojure_core/clojure.core/load-string
+Concurrency,Atoms,Atoms,atom,https://clojuredocs.org/clojure_core/clojure.core/atom
+Concurrency,Atoms,Atoms,swap!,https://clojuredocs.org/clojure_core/clojure.core/swap%21
+Concurrency,Atoms,Atoms,reset!,https://clojuredocs.org/clojure_core/clojure.core/reset%21
+Concurrency,Atoms,Atoms,compare-and-set!,https://clojuredocs.org/clojure_core/clojure.core/compare-and-set%21
+Concurrency,Atoms,Atoms,swap-vals!,https://clojuredocs.org/clojure_core/clojure.core/swap-vals%21
+Concurrency,Atoms,Atoms,reset-vals!,https://clojuredocs.org/clojure_core/clojure.core/reset-vals%21
+Concurrency,Futures,Futures,future,https://clojuredocs.org/clojure_core/clojure.core/future
+Concurrency,Futures,Futures,future-call,https://clojuredocs.org/clojure_core/clojure.core/future-call
+Concurrency,Futures,Futures,future-done?,https://clojuredocs.org/clojure_core/clojure.core/future-done_q
+Concurrency,Futures,Futures,future-cancel,https://clojuredocs.org/clojure_core/clojure.core/future-cancel
+Concurrency,Futures,Futures,future-cancelled?,https://clojuredocs.org/clojure_core/clojure.core/future-cancelled_q
+Concurrency,Futures,Futures,future?,https://clojuredocs.org/clojure_core/clojure.core/future_q
+Concurrency,Threads,Threads,bound-fn,https://clojuredocs.org/clojure_core/clojure.core/bound-fn
+Concurrency,Threads,Threads,bound-fn*,https://clojuredocs.org/clojure_core/clojure.core/bound-fn*
+Concurrency,Threads,Threads,get-thread-bindings,https://clojuredocs.org/clojure_core/clojure.core/get-thread-bindings
+Concurrency,Threads,Threads,push-thread-bindings,https://clojuredocs.org/clojure_core/clojure.core/push-thread-bindings
+Concurrency,Threads,Threads,pop-thread-bindings,https://clojuredocs.org/clojure_core/clojure.core/pop-thread-bindings
+Concurrency,Threads,Threads,thread-bound?,https://clojuredocs.org/clojure_core/clojure.core/thread-bound_q
+Concurrency,Volatiles,Volatiles,volatile!,https://clojuredocs.org/clojure_core/clojure.core/volatile%21
+Concurrency,Volatiles,Volatiles,vreset!,https://clojuredocs.org/clojure_core/clojure.core/vreset%21
+Concurrency,Volatiles,Volatiles,vswap!,https://clojuredocs.org/clojure_core/clojure.core/vswap%21
+Concurrency,Volatiles,Volatiles,volatile?,https://clojuredocs.org/clojure_core/clojure.core/volatile_q
+Concurrency,Misc,Misc,locking,https://clojuredocs.org/clojure_core/clojure.core/locking
+Concurrency,Misc,Misc,pcalls,https://clojuredocs.org/clojure_core/clojure.core/pcalls
+Concurrency,Misc,Misc,pvalues,https://clojuredocs.org/clojure_core/clojure.core/pvalues
+Concurrency,Misc,Misc,pmap,https://clojuredocs.org/clojure_core/clojure.core/pmap
+Concurrency,Misc,Misc,seque,https://clojuredocs.org/clojure_core/clojure.core/seque
+Concurrency,Misc,Misc,promise,https://clojuredocs.org/clojure_core/clojure.core/promise
+Concurrency,Misc,Misc,deliver,https://clojuredocs.org/clojure_core/clojure.core/deliver
+Concurrency,Refs and Transactions,Reference,clojure.org/reference/refs,https://clojure.org/reference/refs
+Concurrency,Refs and Transactions,Create,ref,https://clojuredocs.org/clojure_core/clojure.core/ref
+Concurrency,Refs and Transactions,Examine,deref,https://clojuredocs.org/clojure_core/clojure.core/deref
+Concurrency,Refs and Transactions,Transaction,sync,https://clojuredocs.org/clojure_core/clojure.core/sync
+Concurrency,Refs and Transactions,Transaction,dosync,https://clojuredocs.org/clojure_core/clojure.core/dosync
+Concurrency,Refs and Transactions,Transaction,io!,https://clojuredocs.org/clojure_core/clojure.core/io%21
+Concurrency,Refs and Transactions,In transaction,ensure,https://clojuredocs.org/clojure_core/clojure.core/ensure
+Concurrency,Refs and Transactions,In transaction,ref-set,https://clojuredocs.org/clojure_core/clojure.core/ref-set
+Concurrency,Refs and Transactions,In transaction,alter,https://clojuredocs.org/clojure_core/clojure.core/alter
+Concurrency,Refs and Transactions,In transaction,commute,https://clojuredocs.org/clojure_core/clojure.core/commute
+Concurrency,Refs and Transactions,Validators,set-validator!,https://clojuredocs.org/clojure_core/clojure.core/set-validator%21
+Concurrency,Refs and Transactions,Validators,get-validator,https://clojuredocs.org/clojure_core/clojure.core/get-validator
+Concurrency,Refs and Transactions,History,ref-history-count,https://clojuredocs.org/clojure_core/clojure.core/ref-history-count
+Concurrency,Refs and Transactions,History,ref-min-history,https://clojuredocs.org/clojure_core/clojure.core/ref-min-history
+Concurrency,Refs and Transactions,History,ref-max-history,https://clojuredocs.org/clojure_core/clojure.core/ref-max-history
+Concurrency,Agents,Guide,clojure.org/reference/agents,https://clojure.org/reference/agents
+Concurrency,Agents,Create,agent,https://clojuredocs.org/clojure_core/clojure.core/agent
+Concurrency,Agents,Examine,agent-error,https://clojuredocs.org/clojure_core/clojure.core/agent-error
+Concurrency,Agents,Change State,send,https://clojuredocs.org/clojure_core/clojure.core/send
+Concurrency,Agents,Change State,send-off,https://clojuredocs.org/clojure_core/clojure.core/send-off
+Concurrency,Agents,Change State,restart-agent,https://clojuredocs.org/clojure_core/clojure.core/restart-agent
+Concurrency,Agents,Change State,send-via,https://clojuredocs.org/clojure_core/clojure.core/send-via
+Concurrency,Agents,Change State,set-agent-send-executor!,https://clojuredocs.org/clojure_core/clojure.core/set-agent-send-executor%21
+Concurrency,Agents,Change State,set-agent-send-off-executor!,https://clojuredocs.org/clojure_core/clojure.core/set-agent-send-off-executor%21
+Concurrency,Agents,Block waiting,await,https://clojuredocs.org/clojure_core/clojure.core/await
+Concurrency,Agents,Block waiting,await-for,https://clojuredocs.org/clojure_core/clojure.core/await-for
+Concurrency,Agents,Ref Validators,set-validator!,https://clojuredocs.org/clojure_core/clojure.core/set-validator%21
+Concurrency,Agents,Ref Validators,get-validator,https://clojuredocs.org/clojure_core/clojure.core/get-validator
+Concurrency,Agents,Watchers,add-watch,https://clojuredocs.org/clojure_core/clojure.core/add-watch
+Concurrency,Agents,Watchers,remove-watch,https://clojuredocs.org/clojure_core/clojure.core/remove-watch
+Concurrency,Agents,Thread handling,shutdown-agents,https://clojuredocs.org/clojure_core/clojure.core/shutdown-agents
+Concurrency,Agents,Error,error-handler,https://clojuredocs.org/clojure_core/clojure.core/error-handler
+Concurrency,Agents,Error,set-error-handler!,https://clojuredocs.org/clojure_core/clojure.core/set-error-handler%21
+Concurrency,Agents,Error,error-mode,https://clojuredocs.org/clojure_core/clojure.core/error-mode
+Concurrency,Agents,Error,set-error-mode!,https://clojuredocs.org/clojure_core/clojure.core/set-error-mode%21
+Concurrency,Agents,Misc,*agent*,https://clojuredocs.org/clojure_core/clojure.core/*agent*
+Concurrency,Agents,Misc,release-pending-sends,https://clojuredocs.org/clojure_core/clojure.core/release-pending-sends
+Java Interop,Java Interop,Reference,clojure.org/reference/java_interop,https://clojure.org/reference/java_interop
+Java Interop,General,General,..,https://clojuredocs.org/clojure_core/clojure.core/_dot_dot
+Java Interop,General,General,doto,https://clojuredocs.org/clojure_core/clojure.core/doto
+Java Interop,General,General,new,https://clojuredocs.org/clojure_core/clojure.core/new
+Java Interop,General,General,bean,https://clojuredocs.org/clojure_core/clojure.core/bean
+Java Interop,General,General,comparator,https://clojuredocs.org/clojure_core/clojure.core/comparator
+Java Interop,General,General,enumeration-seq,https://clojuredocs.org/clojure_core/clojure.core/enumeration-seq
+Java Interop,General,General,import,https://clojuredocs.org/clojure_core/clojure.core/import
+Java Interop,General,General,iterator-seq,https://clojuredocs.org/clojure_core/clojure.core/iterator-seq
+Java Interop,General,General,memfn,https://clojuredocs.org/clojure_core/clojure.core/memfn
+Java Interop,General,General,set!,https://clojuredocs.org/clojure_core/clojure.core/set!
+Java Interop,General,General,class,https://clojuredocs.org/clojure_core/clojure.core/class
+Java Interop,General,General,class?,https://clojuredocs.org/clojure_core/clojure.core/class_q
+Java Interop,General,General,bases,https://clojuredocs.org/clojure_core/clojure.core/bases
+Java Interop,General,General,supers,https://clojuredocs.org/clojure_core/clojure.core/supers
+Java Interop,General,General,type,https://clojuredocs.org/clojure_core/clojure.core/type
+Java Interop,General,General,gen-class,https://clojuredocs.org/clojure_core/clojure.core/gen-class
+Java Interop,General,General,gen-interface,https://clojuredocs.org/clojure_core/clojure.core/gen-interface
+Java Interop,General,General,definterface,https://clojuredocs.org/clojure_core/clojure.core/definterface
+Java Interop,Cast,Cast,boolean,https://clojuredocs.org/clojure_core/clojure.core/boolean
+Java Interop,Cast,Cast,byte,https://clojuredocs.org/clojure_core/clojure.core/byte
+Java Interop,Cast,Cast,short,https://clojuredocs.org/clojure_core/clojure.core/short
+Java Interop,Cast,Cast,char,https://clojuredocs.org/clojure_core/clojure.core/char
+Java Interop,Cast,Cast,int,https://clojuredocs.org/clojure_core/clojure.core/int
+Java Interop,Cast,Cast,long,https://clojuredocs.org/clojure_core/clojure.core/long
+Java Interop,Cast,Cast,float,https://clojuredocs.org/clojure_core/clojure.core/float
+Java Interop,Cast,Cast,double,https://clojuredocs.org/clojure_core/clojure.core/double
+Java Interop,Cast,Cast,bigdec,https://clojuredocs.org/clojure_core/clojure.core/bigdec
+Java Interop,Cast,Cast,bigint,https://clojuredocs.org/clojure_core/clojure.core/bigint
+Java Interop,Cast,Cast,num,https://clojuredocs.org/clojure_core/clojure.core/num
+Java Interop,Cast,Cast,cast,https://clojuredocs.org/clojure_core/clojure.core/cast
+Java Interop,Cast,Cast,biginteger,https://clojuredocs.org/clojure_core/clojure.core/biginteger
+Java Interop,Exceptions,Exceptions,throw,https://clojuredocs.org/clojure_core/clojure.core/throw
+Java Interop,Exceptions,Exceptions,try,https://clojuredocs.org/clojure_core/clojure.core/try
+Java Interop,Exceptions,Exceptions,catch,https://clojuredocs.org/clojure_core/clojure.core/catch
+Java Interop,Exceptions,Exceptions,finally,https://clojuredocs.org/clojure_core/clojure.core/finally
+Java Interop,Exceptions,Exceptions,pst,https://clojuredocs.org/clojure_core/clojure.repl/pst
+Java Interop,Exceptions,Exceptions,ex-info,https://clojuredocs.org/clojure_core/clojure.core/ex-info
+Java Interop,Exceptions,Exceptions,ex-data,https://clojuredocs.org/clojure_core/clojure.core/ex-data
+Java Interop,Exceptions,Exceptions,Throwable->map,https://clojuredocs.org/clojure_core/clojure.core/Throwable-%3Emap
+Java Interop,Exceptions,Exceptions,StackTraceElement->vec,https://clojuredocs.org/clojure_core/clojure.core/StackTraceElement-%3Evec
+Java Interop,Exceptions,Exceptions,ex-cause,https://clojure.github.io/clojure/clojure.core-api.html#clojure.core/ex-cause
+Java Interop,Exceptions,Exceptions,ex-message,https://clojure.github.io/clojure/clojure.core-api.html#clojure.core/ex-message
+Java Interop,Exceptions,Exceptions,ex-triage,https://clojure.github.io/clojure/clojure.main-api.html#clojure.main/ex-triage
+Java Interop,Exceptions,Exceptions,ex-str,https://clojure.github.io/clojure/clojure.main-api.html#clojure.main/ex-str
+Java Interop,Exceptions,Exceptions,err->msg,https://clojure.github.io/clojure/clojure.main-api.html#clojure.main/err-%3Emsg
+Java Interop,Exceptions,Exceptions,report-error,https://clojure.github.io/clojure/clojure.main-api.html#clojure.main/report-error
+Java Interop,Arrays,Create,make-array,https://clojuredocs.org/clojure_core/clojure.core/make-array
+Java Interop,Arrays,Create,object-array,https://clojuredocs.org/clojure_core/clojure.core/object-array
+Java Interop,Arrays,Create,boolean-array,https://clojuredocs.org/clojure_core/clojure.core/boolean-array
+Java Interop,Arrays,Create,byte-array,https://clojuredocs.org/clojure_core/clojure.core/byte-array
+Java Interop,Arrays,Create,short-array,https://clojuredocs.org/clojure_core/clojure.core/short-array
+Java Interop,Arrays,Create,char-array,https://clojuredocs.org/clojure_core/clojure.core/char-array
+Java Interop,Arrays,Create,int-array,https://clojuredocs.org/clojure_core/clojure.core/int-array
+Java Interop,Arrays,Create,long-array,https://clojuredocs.org/clojure_core/clojure.core/long-array
+Java Interop,Arrays,Create,float-array,https://clojuredocs.org/clojure_core/clojure.core/float-array
+Java Interop,Arrays,Create,double-array,https://clojuredocs.org/clojure_core/clojure.core/double-array
+Java Interop,Arrays,Create,aclone,https://clojuredocs.org/clojure_core/clojure.core/aclone
+Java Interop,Arrays,Create,to-array,https://clojuredocs.org/clojure_core/clojure.core/to-array
+Java Interop,Arrays,Create,to-array-2d,https://clojuredocs.org/clojure_core/clojure.core/to-array-2d
+Java Interop,Arrays,Create,into-array,https://clojuredocs.org/clojure_core/clojure.core/into-array
+Java Interop,Arrays,Use,aget,https://clojuredocs.org/clojure_core/clojure.core/aget
+Java Interop,Arrays,Use,aset,https://clojuredocs.org/clojure_core/clojure.core/aset
+Java Interop,Arrays,Use,aset-boolean,https://clojuredocs.org/clojure_core/clojure.core/aset-boolean
+Java Interop,Arrays,Use,aset-byte,https://clojuredocs.org/clojure_core/clojure.core/aset-byte
+Java Interop,Arrays,Use,aset-short,https://clojuredocs.org/clojure_core/clojure.core/aset-short
+Java Interop,Arrays,Use,aset-char,https://clojuredocs.org/clojure_core/clojure.core/aset-char
+Java Interop,Arrays,Use,aset-int,https://clojuredocs.org/clojure_core/clojure.core/aset-int
+Java Interop,Arrays,Use,aset-long,https://clojuredocs.org/clojure_core/clojure.core/aset-long
+Java Interop,Arrays,Use,aset-float,https://clojuredocs.org/clojure_core/clojure.core/aset-float
+Java Interop,Arrays,Use,aset-double,https://clojuredocs.org/clojure_core/clojure.core/aset-double
+Java Interop,Arrays,Use,alength,https://clojuredocs.org/clojure_core/clojure.core/alength
+Java Interop,Arrays,Use,amap,https://clojuredocs.org/clojure_core/clojure.core/amap
+Java Interop,Arrays,Use,areduce,https://clojuredocs.org/clojure_core/clojure.core/areduce
+Java Interop,Arrays,Cast,booleans,https://clojuredocs.org/clojure_core/clojure.core/booleans
+Java Interop,Arrays,Cast,bytes,https://clojuredocs.org/clojure_core/clojure.core/bytes
+Java Interop,Arrays,Cast,shorts,https://clojuredocs.org/clojure_core/clojure.core/shorts
+Java Interop,Arrays,Cast,chars,https://clojuredocs.org/clojure_core/clojure.core/chars
+Java Interop,Arrays,Cast,ints,https://clojuredocs.org/clojure_core/clojure.core/ints
+Java Interop,Arrays,Cast,longs,https://clojuredocs.org/clojure_core/clojure.core/longs
+Java Interop,Arrays,Cast,floats,https://clojuredocs.org/clojure_core/clojure.core/floats
+Java Interop,Arrays,Cast,doubles,https://clojuredocs.org/clojure_core/clojure.core/doubles
+Java Interop,Proxy,Guide,Clojure type selection flowchart,https://github.com/cemerick/clojure-type-selection-flowchart
+Java Interop,Proxy,Create,proxy,https://clojuredocs.org/clojure_core/clojure.core/proxy
+Java Interop,Proxy,Create,get-proxy-class,https://clojuredocs.org/clojure_core/clojure.core/get-proxy-class
+Java Interop,Proxy,Create,construct-proxy,https://clojuredocs.org/clojure_core/clojure.core/construct-proxy
+Java Interop,Proxy,Create,init-proxy,https://clojuredocs.org/clojure_core/clojure.core/init-proxy
+Java Interop,Proxy,Misc,proxy-mappings,https://clojuredocs.org/clojure_core/clojure.core/proxy-mappings
+Java Interop,Proxy,Misc,proxy-super,https://clojuredocs.org/clojure_core/clojure.core/proxy-super
+Java Interop,Proxy,Misc,update-proxy,https://clojuredocs.org/clojure_core/clojure.core/update-proxy
+"Sequences, Collections",Zippers,Create,zipper,https://clojuredocs.org/clojure_core/clojure.zip/zipper
+"Sequences, Collections",Zippers,Create,seq-zip,https://clojuredocs.org/clojure_core/clojure.zip/seq-zip
+"Sequences, Collections",Zippers,Create,vector-zip,https://clojuredocs.org/clojure_core/clojure.zip/vector-zip
+"Sequences, Collections",Zippers,Create,xml-zip,https://clojuredocs.org/clojure_core/clojure.zip/xml-zip
+"Sequences, Collections",Zippers,Get loc,up,https://clojuredocs.org/clojure_core/clojure.zip/up
+"Sequences, Collections",Zippers,Get loc,down,https://clojuredocs.org/clojure_core/clojure.zip/down
+"Sequences, Collections",Zippers,Get loc,left,https://clojuredocs.org/clojure_core/clojure.zip/left
+"Sequences, Collections",Zippers,Get loc,right,https://clojuredocs.org/clojure_core/clojure.zip/right
+"Sequences, Collections",Zippers,Get loc,leftmost,https://clojuredocs.org/clojure_core/clojure.zip/leftmost
+"Sequences, Collections",Zippers,Get loc,rightmost,https://clojuredocs.org/clojure_core/clojure.zip/rightmost
+"Sequences, Collections",Zippers,Get seq,lefts,https://clojuredocs.org/clojure_core/clojure.zip/lefts
+"Sequences, Collections",Zippers,Get seq,rights,https://clojuredocs.org/clojure_core/clojure.zip/rights
+"Sequences, Collections",Zippers,Get seq,path,https://clojuredocs.org/clojure_core/clojure.zip/path
+"Sequences, Collections",Zippers,Get seq,children,https://clojuredocs.org/clojure_core/clojure.zip/children
+"Sequences, Collections",Zippers,Change',make-node,https://clojuredocs.org/clojure_core/clojure.zip/make-node
+"Sequences, Collections",Zippers,Change',replace,https://clojuredocs.org/clojure_core/clojure.zip/replace
+"Sequences, Collections",Zippers,Change',edit,https://clojuredocs.org/clojure_core/clojure.zip/edit
+"Sequences, Collections",Zippers,Change',insert-child,https://clojuredocs.org/clojure_core/clojure.zip/insert-child
+"Sequences, Collections",Zippers,Change',insert-left,https://clojuredocs.org/clojure_core/clojure.zip/insert-left
+"Sequences, Collections",Zippers,Change',insert-right,https://clojuredocs.org/clojure_core/clojure.zip/insert-right
+"Sequences, Collections",Zippers,Change',append-child,https://clojuredocs.org/clojure_core/clojure.zip/append-child
+"Sequences, Collections",Zippers,Change',remove,https://clojuredocs.org/clojure_core/clojure.zip/remove
+"Sequences, Collections",Zippers,Move,next,https://clojuredocs.org/clojure_core/clojure.zip/next
+"Sequences, Collections",Zippers,Move,prev,https://clojuredocs.org/clojure_core/clojure.zip/prev
+"Sequences, Collections",Zippers,Misc,root,https://clojuredocs.org/clojure_core/clojure.zip/root
+"Sequences, Collections",Zippers,Misc,node,https://clojuredocs.org/clojure_core/clojure.zip/node
+"Sequences, Collections",Zippers,Misc,branch?,https://clojuredocs.org/clojure_core/clojure.zip/branch_q
+"Sequences, Collections",Zippers,Misc,end?,https://clojuredocs.org/clojure_core/clojure.zip/end_q
+"I/O, Vars, Namespaces, Loading",XML,XML,clojure.xml/parse,https://clojuredocs.org/clojure_core/clojure.xml/parse
+"I/O, Vars, Namespaces, Loading",XML,XML,xml-seq,https://clojuredocs.org/clojure_core/clojure.core/xml-seq
+"I/O, Vars, Namespaces, Loading",REPL,REPL,*1,https://clojuredocs.org/clojure_core/clojure.core/*1
+"I/O, Vars, Namespaces, Loading",REPL,REPL,*2,https://clojuredocs.org/clojure_core/clojure.core/*2
+"I/O, Vars, Namespaces, Loading",REPL,REPL,*3,https://clojuredocs.org/clojure_core/clojure.core/*3
+"I/O, Vars, Namespaces, Loading",REPL,REPL,*e,https://clojuredocs.org/clojure_core/clojure.core/*e
+"I/O, Vars, Namespaces, Loading",REPL,REPL,*print-dup*,https://clojuredocs.org/clojure_core/clojure.core/*print-dup*
+"I/O, Vars, Namespaces, Loading",REPL,REPL,*print-length*,https://clojuredocs.org/clojure_core/clojure.core/*print-length*
+"I/O, Vars, Namespaces, Loading",REPL,REPL,*print-level*,https://clojuredocs.org/clojure_core/clojure.core/*print-level*
+"I/O, Vars, Namespaces, Loading",REPL,REPL,*print-meta*,https://clojuredocs.org/clojure_core/clojure.core/*print-meta*
+"I/O, Vars, Namespaces, Loading",REPL,REPL,*print-readably*,https://clojuredocs.org/clojure_core/clojure.core/*print-readably*
+"Docs, Spec, Metadata",Code,Code,*compile-files*,https://clojuredocs.org/clojure_core/clojure.core/*compile-files*
+"Docs, Spec, Metadata",Code,Code,*compile-path*,https://clojuredocs.org/clojure_core/clojure.core/*compile-path*
+"Docs, Spec, Metadata",Code,Code,*file*,https://clojuredocs.org/clojure_core/clojure.core/*file*
+"Docs, Spec, Metadata",Code,Code,*warn-on-reflection*,https://clojuredocs.org/clojure_core/clojure.core/*warn-on-reflection*
+"Docs, Spec, Metadata",Code,Code,compile,https://clojuredocs.org/clojure_core/clojure.core/compile
+"Docs, Spec, Metadata",Code,Code,loaded-libs,https://clojuredocs.org/clojure_core/clojure.core/loaded-libs
+"Docs, Spec, Metadata",Code,Code,test,https://clojuredocs.org/clojure_core/clojure.core/test
+"Docs, Spec, Metadata",Misc,Misc,eval,https://clojuredocs.org/clojure_core/clojure.core/eval
+"Docs, Spec, Metadata",Misc,Misc,force,https://clojuredocs.org/clojure_core/clojure.core/force
+"Docs, Spec, Metadata",Misc,Misc,hash,https://clojuredocs.org/clojure_core/clojure.core/hash
+"Docs, Spec, Metadata",Misc,Misc,name,https://clojuredocs.org/clojure_core/clojure.core/name
+"Docs, Spec, Metadata",Metadata,Misc,*clojure-version*,https://clojuredocs.org/clojure_core/clojure.core/*clojure-version*
+"Docs, Spec, Metadata",Metadata,Misc,clojure-version,https://clojuredocs.org/clojure_core/clojure.core/clojure-version
+"I/O, Vars, Namespaces, Loading",I/O,Misc,*command-line-args*,https://clojuredocs.org/clojure_core/clojure.core/*command-line-args*
+"I/O, Vars, Namespaces, Loading",Browser/Shell,Browser/Shell,browse-url,https://clojuredocs.org/clojure_core/clojure.java.browse/browse-url
+"I/O, Vars, Namespaces, Loading",Browser/Shell,Browser/Shell,sh,https://clojuredocs.org/clojure_core/clojure.java.shell/sh
+"I/O, Vars, Namespaces, Loading",Browser/Shell,Browser/Shell,with-sh-dir,https://clojuredocs.org/clojure_core/clojure.java.shell/with-sh-dir
+"I/O, Vars, Namespaces, Loading",Browser/Shell,Browser/Shell,with-sh-env,https://clojuredocs.org/clojure_core/clojure.java.shell/with-sh-env

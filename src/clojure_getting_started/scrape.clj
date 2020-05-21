@@ -1,4 +1,5 @@
 (ns clojure-getting-started.web
+  (:import [org.jsoup Jsoup])
   (:require [compojure.core :refer [defroutes GET PUT POST DELETE ANY]]
             [compojure.handler :refer [site]]
             [compojure.route :as route]
@@ -6,11 +7,13 @@
             [clojure.java.jdbc :as db]
             [ring.adapter.jetty :as jetty]
             [environ.core :refer [env]]
+            [clojure.data.xml :refer :all]
             [clojure.pprint :as p]
             [camel-snake-kebab.core :as csk]))
 
 (def sample (env :sample "sample-string-a-ma-jig"))
 
+(map second (re-seq #":body\s(.*?)\s:\w+?\s" "<a><![CDATA[\nfoo :body 1 :editors  \"(reduce + [1 2 3 4 5])  ;;=> 15\\n(reduce + [])           ;;=> 0\\n(reduce + [1])  :editors        ;;=> 1\\n(reduce + [1 2])        ;;=> 3\\n(reduce + 1 [])  :body 2 :editors       ;;=> 1\\n(reduce + 1 [2 3])      ;;=> 6\"  bar\n]]><![CDATA[\nbaz\n]]></a>"))
 (defn splash []
   {:status 200
    :headers {"Content-Type" "text/html"}
@@ -50,7 +53,7 @@
         example (mark-it-up (slurpy url))]
     (str "<p>" name ": " example "</p>")))
 
-(defn build-docs []
+(defn scrape []
   {:status 200
    :headers {"Content-Type" "text/html"}
    :body (let [rows (get-rows)
@@ -62,8 +65,8 @@
               :sayings {:content input}))
 
 (defroutes app
-  (GET "/docs" []
-       (build-docs))
+  (GET "/scrape" []
+       (scrape))
   (GET "/camel" {{input :input} :params}
        (record (csk/->camelCase input))
        {:status 200
