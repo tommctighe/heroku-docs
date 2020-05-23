@@ -11,6 +11,7 @@
                  [org.postgresql/postgresql "42.2.12"]
                  [org.jsoup/jsoup "1.13.1"]
                  [org.clojure/data.xml "0.0.8"]
+                 [hiccup "1.0.5"]
                  [camel-snake-kebab "0.4.0"]]
   :min-lein-version "2.0.0"
   :plugins [[lein-environ "1.2.0"]]

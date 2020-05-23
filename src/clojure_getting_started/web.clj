@@ -23,38 +23,24 @@
                   (format "<li>%s</li>" (:content s)))
                 ["</ul>"])})
 
-(nth '(["cat" "dog"]) 0)
-
-(defn link-count [url]
-  (let [conn (Jsoup/connect url)
-        page (.get conn)
-        text (.data (first (.select page "script")))]
-    text))
-
-(defn get-rows []
+(defn get-kingdoms []
   (db/query (env :database-url "postgres://localhost:5432/docs")
-                                  ["select name, url from core limit 30"]))
-
-(defn slurpy [url]
-  (let [html (slurp url)
-        example-strings (map second (re-seq #":body\s\\\"(.*?)\\\"," html))]
-    example-strings))
+                                  ["select distinct kingdom from core order by kingdom asc limit 30"]))
 
 (defn mark-it-up [strings]
-  (for [string strings]
-    (format "<br>%s" string))
+  (for [{:keys [kingdom]}  strings]
+    (format "<p><strong>%s<strong></p>" kingdom))
   )
 
 (defn make-html [rows]
-  (for [{:keys [name url]} rows
-        example (mark-it-up (slurpy url))]
-    (str "<p>" name ": " example "</p>")))
+  (for [kingdom rows]
+    (str)))
 
 (defn build-docs []
   {:status 200
    :headers {"Content-Type" "text/html"}
-   :body (let [rows (get-rows)
-               html (make-html rows)]
+   :body (let [kingdoms (get-kingdoms)
+               html (mark-it-up kingdoms)]
            html)})
 
 (defn record [input]
