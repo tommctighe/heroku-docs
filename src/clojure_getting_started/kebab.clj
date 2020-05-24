@@ -7,8 +7,23 @@
             [ring.adapter.jetty :as jetty]
             [environ.core :refer [env]]
             [clojure.pprint :as p]
-            [templates.views.layout :as layout]
-            [templates.views.content :as content]))
+            [hiccup-templates.views.layout :as layout]
+            [hiccup-templates.views.contents :as contents]
+            [camel-snake-kebab.core :as csk]))
+
+(def sample (env :sample "sample-string-a-ma-jig"))
+
+(defn splash []
+  {:status 200
+   :headers {"Content-Type" "text/html"}
+   :body (concat (for [kind ["camel" "snake" "kebab"]]
+                   (format "make into <a href='/%s?input=%s'> %s</a> case... </a><br />"
+                    kind sample kind))
+                ["<hr /><ul>"]
+                (for [s (db/query (env :database-url "postgres://localhost:5432/docs")
+                                  ["select content from sayings"])]
+                  (format "<li>%s</li>" (:content s)))
+                ["</ul>"])})
 
 (defn get-kingdoms []
   (db/query (env :database-url "postgres://localhost:5432/docs")
@@ -37,9 +52,23 @@
 (defroutes app
   (GET "/docs" []
        (build-docs))
-  (GET "/" {params :params}
-       (layout/app "Home" (content/index params)))
-  (route/resources "/")
+  (GET "/camel" {{input :input} :params}
+       (record (csk/->camelCase input))
+       {:status 200
+        :headers {"Content-Type" "text/html"}
+        :body (csk/->camelCase input)})
+  (GET "/snake" {{input :input} :params}
+       (record (csk/->snake_case input))
+       {:status 200
+        :headers {"Content-Type" "text/html"}
+        :body (csk/->snake_case input)})
+  (GET "/kebab" {{input :input} :params}
+       (record (csk/->kebab-case input))
+       {:status 200
+        :headers {"Content-Type" "text/html"}
+        :body (csk/->kebab-case input)})
+  (GET "/" []
+       (splash))
   (ANY "*" []
        (route/not-found (slurp (io/resource "404.html")))))
 
