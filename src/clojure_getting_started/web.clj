@@ -10,10 +10,6 @@
             [templates.views.layout :as layout]
             [templates.views.content :as content]))
 
-(defn get-kingdoms []
-  (db/query (env :database-url "postgres://localhost:5432/docs")
-                                  ["select distinct kingdom from core order by kingdom asc limit 30"]))
-
 (defn mark-it-up [strings]
   (for [{:keys [kingdom]} strings]
     (format "<p><strong>%s<strong></p>" kingdom))
