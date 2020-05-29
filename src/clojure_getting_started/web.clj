@@ -10,29 +10,11 @@
             [templates.views.layout :as layout]
             [templates.views.content :as content]))
 
-(defn mark-it-up [strings]
-  (for [{:keys [kingdom]} strings]
-    (format "<p><strong>%s<strong></p>" kingdom))
-  )
-
-(defn make-html [rows]
-  (for [kingdom rows]
-    (str)))
-
-(defn build-docs []
-  {:status 200
-   :headers {"Content-Type" "text/html"}
-   :body (let [kingdoms (get-kingdoms)
-               html (mark-it-up kingdoms)]
-           html)})
-
 (defn record [input]
   (db/insert! (env :database-url "postgres://localhost:5432/docs")
               :sayings {:content input}))
 
 (defroutes app
-  (GET "/docs" []
-       (build-docs))
   (GET "/" {params :params}
        (layout/app "Home" (content/index params)))
   (route/resources "/")
