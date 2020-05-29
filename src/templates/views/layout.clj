@@ -1,7 +1,6 @@
 (ns templates.views.layout
   (:use [hiccup.page :only (html5 include-css include-js)]
         [templates.views.content :as c]))
-
 (defn app [title & content]
   (html5 {:ng-app "myApp" :lang "en"}
          [:head
@@ -12,4 +11,4 @@
           (include-js "js/script.js")
           (include-css "css/style.css")
           [:body
-           [:div {:class "main-content"} (c/kingdom-section) content]]]))
+           [:div {:class "main-content"} (c/top-section) content]]]))
