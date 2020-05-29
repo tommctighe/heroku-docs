@@ -63,6 +63,13 @@
                 f-attr (attr-str f)]
             [:li {:class "item"} [:a {:href (str "/?kingdom=" k  "&clan=" c-id "&family=" id "#" f-attr)} f]]))]]))
 
+(defn family-section [fk]
+  [:div
+   [:h2 "yap..."]
+   [:p {:class "item-heading"} "yup..."]
+   [:p "Docstring"]
+   [:p "Arglist"]])
+
 (defn item-section [fk]
   [:div
    [:h2 "yap..."]
