@@ -54,9 +54,9 @@
 (defn make-item-section [rows]
   (let [title (:title (first rows))
         s-id (attr-str title)]
-    [:div {:id s-id}
+    [:section {:id s-id}
      [:h2 title]
-     [:p "A little rap about this section..."]
+     [:div {:class "note"} [:p "A little rap about this section..."]]     
      [:p "Docstring"]
      [:p "Arglist"]
      [:p "Examples!"]]))
