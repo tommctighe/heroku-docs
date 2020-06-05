@@ -8,15 +8,13 @@
             [environ.core :refer [env]]
             [clojure.pprint :as p]
             [templates.views.layout :as layout]
-            [templates.views.content :as content]))
-
-(defn record [input]
-  (db/insert! (env :database-url "postgres://localhost:5432/docs")
-              :sayings {:content input}))
+            [templates.views.content :as content]
+            [scrape :as scraper]))
 
 (defroutes app
+  (GET "/scrape" [] (layout/scrape-layout "Scrape" (content/scrape-page)))
   (GET "/" {params :params}
-       (layout/app "Home" (content/index params)))
+        (layout/app "/" (content/index params)))
   (route/resources "/")
   (ANY "*" []
        (route/not-found (slurp (io/resource "404.html")))))

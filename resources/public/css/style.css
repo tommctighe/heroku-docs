@@ -83,7 +83,25 @@ section {
 }
 
 section:last-child {
-  padding-bottom: 5rem;
+  padding-bottom: 15rem;
+}
+
+pre {
+  font-size: 1.2em;
+  background: #fafafa;
+  padding: 20px!important;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+  width: 100%;
+}
+
+@media all and (orientation:landscape) {
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+  }
 }
 
 p { 
@@ -186,16 +204,7 @@ article {
   margin-left: 1em;
 }
 
-pre {
-  border: none!important;
-  font-size: 1.2em;
-  background: #fafafa;
-  padding: 20px!important;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  text-align: justify;
-  width: 100%;
-}
+
 
 .card-title {
   font-size: 1.7em;
@@ -206,13 +215,7 @@ pre {
   color: #e53935;
 }
 
-@media all and (orientation:landscape) {
-pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  text-align: justify;
-  }
-}
+
 
 
 /* horizontal scroll styles*/

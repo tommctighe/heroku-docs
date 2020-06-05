@@ -5,15 +5,8 @@
         [clojure.java.jdbc :as db]
         [environ.core :refer [env]]
         [clojure.string :as s]
-        [clojure.pprint :as pprint]))
-
-(defn print-code [o]
-  (binding [pprint/*print-right-margin* 100
-            pprint/*print-miser-width* 60]
-    (pprint/with-pprint-dispatch pprint/code-dispatch
-      (pprint/pprint o))))
-
-(print-code "(defn go [] Wow! (slug)")
+        [clojure.pprint :as pprint]
+        [rewrite-clj.parser :as p]))
 
 (defn attr-str [s]
   (.toLowerCase (replace (replace s " " "-") "," "")))
@@ -28,8 +21,13 @@
 
 (defn item-query [id] (db/query (env :database-url "postgres://localhost:5432/docs")["select item.name as title from item where item.id = ?" id]))
 
+(defn scrape-query [] (db/query (env :database-url "postgres://localhost:5432/docs") ["select name, url from item limit 6"]))
+
 (defn get-query
-  ([] (top-query))
+  ([name]
+   (name {
+          :top (top-query)
+          :scrape (scrape-query)}))
   ([name id]
    (name {
      :kingdom (kingdom-query id)
@@ -37,13 +35,21 @@
      :family (family-query id)
      :item (item-query id)})))
 
-(defn get-title [rows] (get (first rows) :title "Clojure"))
-(defn get-section-class [title](attr-str title))
+(defn slurpy [url]
+  (let [html (slurp url)
+        example-strings (map second (re-seq #":body\s\\\"(.*?)\\\"," html))]
+    example-strings))
 
-(defn make-section [rows section-name]
+(defn get-title [rows] (get (first rows) :title "Clojure"))
+(defn get-section-id [title](attr-str title))
+
+(defn cdata-to-string [str]
+  (replace str #"\\\\n" "\n"))
+
+(defn make-section [rows class-name]
   (let [title (get-title rows)
-        s-class (get-section-class title)]
-    [:section {:id section-name :class s-class}
+        s-id (get-section-id title)]
+    [:section {:id s-id :class class-name}
      [:h2 title]
      [:div {:class "note"} [:p "A little rap about this section..."]]
      [:div {:class "cards"}
@@ -58,16 +64,39 @@
           [:a {:href href-str}
            [:div {:class "card"} name]]))]]))
 
-(defn make-item-section [rows section-name]
+(defn make-item-section [rows class-name]
   (let [title (get-title rows)
-        s-class (get-section-class title)
+        s-id (get-section-id title)
         s-name (meta (resolve (symbol title)))]
-    [:section {:id section-name :class s-class}
+    [:section {:id s-id :class class-name}
      [:h2 title]
      [:div {:class "note"} [:p "A little rap about this section..."]]     
      [:p {:class "docstring"} (str (:doc s-name))]
      [:p {:class "arglists"} (str (:arglists s-name))]
-     [:p "Examples!"]] ))
+     [:p "(for [ex examples]"]
+     [:pre {:class "prettyprint lang-clj"} (cdata-to-string "code...")]]))
+
+(defn make-scrape-section [rows]
+  [:section {:id "scrape"}
+     [:h2 "Scrapy!"]
+     [:div {:class "note"} [:p "Scraping examlples 'til the break of day..."]]
+      (for [kv rows
+            example (slurpy (:url kv))]
+        [:pre {:class "prettyprint lang-clj"} (cdata-to-string example)])])
+
+(defn insert-row [item-id example]
+  (db/insert! (env :database-url "postgres://localhost:5432/docs")
+              :example {:id item-id }))
+
+(defn insert-examples [rows]
+  [:section {:id "scrape"}
+     [:h2 "Scrapy!"]
+     [:div {:class "note"} [:p "Scraping examlples 'til the break of day..."]]
+      (for [r rows
+            example (slurpy (:url r))
+            item-id (:id r)
+            return (insert-row item-id example)]
+        [:p item-id])])
 
 (defn index [params]
   "Add sections to the Index page "
@@ -78,8 +107,40 @@
       (make-item-section rows table)
       (make-section rows table)))))
 
+(defn scrape-page []
+  "Add sections to the Scrape page "
+  (make-scrape-section (get-query :scrape)))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 (defn not-found []
   [:div
    [:h1 {:class "info-warning"} "Page Not Found"]
    [:p "that page doesn't exist."]
    (link-to {class "btn btn-primary"} "/" "Home")])
+
+(def code3 (resolve (symbol "map")))
+(defn print-code-out [code]
+  (with-out-str (pprint/write code :dispatch pprint/code-dispatch)))
+
+(defn print-code [code]
+  (pprint/write code :dispatch pprint/code-dispatch))
+
+(defn printy [code ]
+  (pprint/with-pprint-dispatch
+    pprint/code-dispatch   ;
+                 (pprint/pprint code)))
+
+(def code '(do (println "Hello") (println "Goodbye") (println "Hey, you left me out!")))
+(print-code code)

@@ -1,42 +1,24 @@
-(ns clojure-getting-started.web
+(ns scrape
   (:import [org.jsoup Jsoup])
-  (:require [compojure.core :refer [defroutes GET PUT POST DELETE ANY]]
-            [compojure.handler :refer [site]]
-            [compojure.route :as route]
+  (:require
             [clojure.java.io :as io]
             [clojure.java.jdbc :as db]
             [ring.adapter.jetty :as jetty]
             [environ.core :refer [env]]
             [clojure.data.xml :refer :all]
             [clojure.pprint :as p]
-            [camel-snake-kebab.core :as csk]))
-
-(def sample (env :sample "sample-string-a-ma-jig"))
+            [templates.views.layout :as layout]))
 
 (map second (re-seq #":body\s(.*?)\s:\w+?\s" "<a><![CDATA[\nfoo :body 1 :editors  \"(reduce + [1 2 3 4 5])  ;;=> 15\\n(reduce + [])           ;;=> 0\\n(reduce + [1])  :editors        ;;=> 1\\n(reduce + [1 2])        ;;=> 3\\n(reduce + 1 [])  :body 2 :editors       ;;=> 1\\n(reduce + 1 [2 3])      ;;=> 6\"  bar\n]]><![CDATA[\nbaz\n]]></a>"))
-(defn splash []
-  {:status 200
-   :headers {"Content-Type" "text/html"}
-   :body (concat (for [kind ["camel" "snake" "kebab"]]
-                   (format "make into <a href='/%s?input=%s'> %s</a> case... </a><br />"
-                    kind sample kind))
-                ["<hr /><ul>"]
-                (for [s (db/query (env :database-url "postgres://localhost:5432/docs")
-                                  ["select content from sayings"])]
-                  (format "<li>%s</li>" (:content s)))
-                ["</ul>"])})
 
-(nth '(["cat" "dog"]) 0)
+(def code2 ";; make an atomic list\\n(def players (atom ()))\\n;; #'user/players\\n\\n;; conjoin a keyword into that list\\n(swap! players conj :player1)\\n;;=> (:player1)\\n\\n;; conjyoin a second keyword into the list\\n(swap! players conj :player2)\\n;;=> (:player2 :player1)\\n\\n;; take a look at what is in the list\\n(deref players)\\n;;=> (:player2 :player1)")
 
-(defn link-count [url]
-  (let [conn (Jsoup/connect url)
-        page (.get conn)
-        text (.data (first (.select page "script")))]
-    text))
+(defn cdata-to-string [str]
+  (replace str #"\\n" "\n"))
 
 (defn get-rows []
   (db/query (env :database-url "postgres://localhost:5432/docs")
-                                  ["select name, url from core limit 30"]))
+                                  ["select name, url from item limit 6"]))
 
 (defn slurpy [url]
   (let [html (slurp url)
@@ -50,8 +32,8 @@
 
 (defn make-html [rows]
   (for [{:keys [name url]} rows
-        example (mark-it-up (slurpy url))]
-    (str "<p>" name ": " example "</p>")))
+        example (slurpy url)]
+    (str name ": " example)))
 
 (defn scrape []
   {:status 200
@@ -60,37 +42,25 @@
                html (make-html rows)]
            html)})
 
-(defn record [input]
-  (db/insert! (env :database-url "postgres://localhost:5432/docs")
-              :sayings {:content input}))
 
-(defroutes app
-  (GET "/scrape" []
-       (scrape))
-  (GET "/camel" {{input :input} :params}
-       (record (csk/->camelCase input))
-       {:status 200
-        :headers {"Content-Type" "text/html"}
-        :body (csk/->camelCase input)})
-  (GET "/snake" {{input :input} :params}
-       (record (csk/->snake_case input))
-       {:status 200
-        :headers {"Content-Type" "text/html"}
-        :body (csk/->snake_case input)})
-  (GET "/kebab" {{input :input} :params}
-       (record (csk/->kebab-case input))
-       {:status 200
-        :headers {"Content-Type" "text/html"}
-        :body (csk/->kebab-case input)})
-  (GET "/" []
-       (splash))
-  (ANY "*" []
-       (route/not-found (slurp (io/resource "404.html")))))
 
-(defn -main [& [port]]
-  (let [port (Integer. (or port (env :port) 5000))]
-    (jetty/run-jetty (site #'app) {:port port :join? false})))
 
-;; For interactive development:
-;; (.stop server)
-;; (def server (-main))
+
+(defn link-count [url]
+  (let [conn (Jsoup/connect url)
+        page (.get conn)
+        text (.data (first (.select page "script")))]
+    text))
+
+
+(defn splash [sample]
+  {:status 200
+   :headers {"Content-Type" "text/html"}
+   :body (concat (for [kind ["camel" "snake" "kebab"]]
+                   (format "make into <a href='/%s?input=%s'> %s</a> case... </a><br />"
+                    kind sample kind))
+                ["<hr /><ul>"]
+                (for [s (db/query (env :database-url "postgres://localhost:5432/docs")
+                                  ["select content from sayings"])]
+                  (format "<li>%s</li>" (:content s)))
+                ["</ul>"])})

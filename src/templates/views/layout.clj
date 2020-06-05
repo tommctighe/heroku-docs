@@ -13,6 +13,22 @@
           ;; (include-js "js/ui-bootstrap-tpls-0.7.0.min.js")
           ;; (include-js "js/script.js")
           (include-css "css/style.css")
+          (include-css "css/desert.css")
+          (include-js "https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
+          (include-js "js/lang-clj.js")
           [:body
-           [:div {:id "main-content"}  (c/make-section (get-query) "top") content]]])
+           [:div {:id "main-content"}  (c/make-section (get-query :top) "top") content]]])
+  )
+
+(defn scrape-layout [title & content]
+  (html5 {:ng-app "myApp" :lang "en"}
+         [:head
+          [:meta {"name" "viewport" "content" "width=device-width, initial-scale=1"}]
+          [:title title]
+          (include-css "css/style.css")
+          (include-css "css/desert.css")
+          (include-js "https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
+          (include-js "js/lang-clj.js")
+          [:body
+           [:div {:id "main-content"}  (c/make-scrape-section (get-query :scrape)) content]]])
   )
