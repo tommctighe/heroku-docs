@@ -21,7 +21,7 @@
 
 (defn item-query [id] (db/query (env :database-url "postgres://localhost:5432/docs")["select item.name as title from item where item.id = ?" id]))
 
-(defn scrape-query [] (db/query (env :database-url "postgres://localhost:5432/docs") ["select id as item_id, url from item limit 12"]))
+(defn scrape-query [] (db/query (env :database-url "postgres://localhost:5432/docs") ["select id as item_id, url from item GROUP BY id, url limit 10"]))
 
 (defn get-query
   ([name]
@@ -35,12 +35,13 @@
      :family (family-query id)
      :item (item-query id)})))
 
-(defn slurp-example-strings [url]
+(defn scrape-example-strings [url]
   (let [html (slurp url)
         example-strings (map second (re-seq #":body\s\\\"(.*?)\\\"," html))]
     example-strings))
 
 (defn get-title [rows] (get (first rows) :title "Clojure"))
+
 (defn get-section-id [title](attr-str title))
 
 (defn cdata-to-string [str]
@@ -76,42 +77,19 @@
      [:p "(for [ex examples]"]
      [:pre {:class "prettyprint lang-clj"} (cdata-to-string "code...")]]))
 
-(defn make-scrape-section [rows]
-  [:section {:id "scrape"}
-     [:h2 "Scrapy!"]
-     [:div {:class "note"} [:p "Scraping examlples 'til the break of day..."]]
-      (for [kv rows
-            example (slurp-example-strings (:url kv))]
-        [:pre {:class "prettyprint lang-clj"} (cdata-to-string example)])])
-
-(defn insert-row [item-id example]
-  (db/insert! (env :database-url "postgres://localhost:5432/docs")
-              :example {:item_id item-id :example example}))
-
-(def ex-vector [[6, "example-1"] [6, "example-2"]])
-
 (defn insert-all-examples [ex-vector]
-  (class ex-vector))
-
-(defn insert-all-examples2 [ex-vector]
   (db/insert-multi! (env :database-url "postgres://localhost:5432/docs")
-                    :example
+                    :examples
                     [:item_id :example]
                     ex-vector))
 
-;;(insert-all-examples ex-vector)
-
-(defn build-insert-vec [item_id example]
-  [[6 "ex2"] [5 "ex6"]])
-
-(defn insert-examples [rows]
-  [:section {:id "scrape"}
-     [:h2 "Scrapy!"]
-   (let [total []
-         examples (map #(slurp-example-strings (:url %) rows))
-         vectors (map #(vector (:item_id r) %) examples)
-         all (into total vectors)]
-     (insert-all-examples all))])
+(defn insert-examples [rows] ;; Can this be simpler?
+  "For each URL, scrape its examples, package for multi-insert"
+  (insert-all-examples (apply concat ;; because we create seq of seqs
+                              (map (fn [{item_id :item_id url :url}]
+                                (map #(vector item_id %)
+                                     (scrape-example-strings url)))
+                                   rows))))
 
 (defn index [params]
   "Add sections to the Index page "
@@ -123,7 +101,7 @@
       (make-section rows table)))))
 
 (defn scrape-page []
-  "Add sections to the Scrape page "
+  "Populate DB with scraped examples"
   ;;(make-scrape-section (get-query :scrape))
   (insert-examples (get-query :scrape)))
 

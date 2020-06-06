@@ -30,5 +30,6 @@
           (include-js "https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
           (include-js "js/lang-clj.js")
           [:body
-           [:div {:id "main-content"}  (c/scrape-page)]]])
+           [:div {:id "main-content"}  (c/scrape-page)
+            [:p "scraping..."]]]])
   )

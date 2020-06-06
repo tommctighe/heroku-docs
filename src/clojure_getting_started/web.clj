@@ -12,7 +12,7 @@
             [scrape :as scraper]))
 
 (defroutes app
-  (GET "/scrape" [] (layout/scrape-layout "Scrape" (content/scrape-page)))
+  (GET "/scrape" [] (layout/scrape-layout "Scrape"))
   (GET "/" {params :params}
         (layout/app "/" (content/index params)))
   (route/resources "/")
