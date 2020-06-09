@@ -83,9 +83,52 @@
                     [:item_id :example]
                     ex-vector))
 
-(defn insert-examples [rows] ;; Can this be simpler?
+;; rows <-- select url, item_id from items
+;; catch exceptions?
+(defn do-result
+  [outpath result]
+  (if (and (map? result)
+           (contains? result :url)
+           (contains? result :data))
+    (spit (str outpath (url-to-file (:url result)))
+          (:data result))))
+
+(defn file-exists?
+  [filepath]
+  (.exists (clojure.java.io/as-file filepath)))
+
+(defn make-dispatcher
+  [outpath]
+    (fn [domain]
+      (let [file (str outpath (url-to-file domain))]
+        (if (file-exists? file)
+          nil
+          (->> (get-url domain)
+               (do-result outpath))))))
+
+(defn run-crawl
+  [data]
+  (let [bucket (:bucket data)
+        outpath (:outpath data)
+        dispatcher (make-dispatcher outpath)]
+    (doall (map dispatcher bucket))))
+
+(defn run-threads [rows]
+  (let [num-agents 256
+        urls (map #(:url %) rows)
+        num-items (count rows)
+        bucket-size (int (/ num-items num-agents))
+        buckets (partition bucket-size bucket-size [] urls)
+        agents (map #(agent {:bucket %}) buckets)]
+    (doall (map #(send-off % run-crawl) agents))
+    (apply await agents)
+    (shutdown-agents)))
+
+
+
+(defn get-examples [rows] ;; Do we need to create a seq of seqs? simplify?
   "For each URL, scrape its examples, package for multi-insert"
-  (insert-all-examples (apply concat ;; because we create seq of seqs
+  (insert-all-examples (apply concat ;; because we create a seq of seqs
                               (map (fn [{item_id :item_id url :url}]
                                 (map #(vector item_id %)
                                      (scrape-example-strings url)))
@@ -103,7 +146,7 @@
 (defn scrape-page []
   "Populate DB with scraped examples"
   ;;(make-scrape-section (get-query :scrape))
-  (insert-examples (get-query :scrape)))
+  (get-examples (get-query :scrape)))
 
 
 
