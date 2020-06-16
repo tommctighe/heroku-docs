@@ -35,11 +35,6 @@
      :family (family-query id)
      :item (item-query id)})))
 
-(defn scrape-example-strings [url]
-  (let [html (slurp url)
-        example-strings (map second (re-seq #":body\s\\\"(.*?)\\\"," html))]
-    example-strings))
-
 (defn get-title [rows] (get (first rows) :title "Clojure"))
 
 (defn get-section-id [title](attr-str title))
@@ -77,7 +72,7 @@
      [:p "(for [ex examples]"]
      [:pre {:class "prettyprint lang-clj"} (cdata-to-string "code...")]]))
 
-(defn insert-all-examples [ex-vector]
+(defn insert-all-examples2 [ex-vector]
   (db/insert-multi! (env :database-url "postgres://localhost:5432/docs")
                     :examples
                     [:item_id :example]
@@ -86,53 +81,41 @@
 ;; rows <-- select url, item_id from items
 ;; catch exceptions?
 (defn do-result
-  [outpath result]
+  [result]
   (if (and (map? result)
            (contains? result :url)
            (contains? result :data))
-    (spit (str outpath (url-to-file (:url result)))
-          (:data result))))
+    (println "In do-result: " result)))
 
-(defn file-exists?
-  [filepath]
-  (.exists (clojure.java.io/as-file filepath)))
-
-(defn make-dispatcher
-  [outpath]
-    (fn [domain]
-      (let [file (str outpath (url-to-file domain))]
-        (if (file-exists? file)
-          nil
-          (->> (get-url domain)
-               (do-result outpath))))))
-
-(defn run-crawl
-  [data]
-  (let [bucket (:bucket data)
-        outpath (:outpath data)
-        dispatcher (make-dispatcher outpath)]
-    (doall (map dispatcher bucket))))
-
-(defn run-threads [rows]
-  (let [num-agents 256
-        urls (map #(:url %) rows)
-        num-items (count rows)
-        bucket-size (int (/ num-items num-agents))
-        buckets (partition bucket-size bucket-size [] urls)
-        agents (map #(agent {:bucket %}) buckets)]
-    (doall (map #(send-off % run-crawl) agents))
-    (apply await agents)
-    (shutdown-agents)))
-
-
+(defn insert-all-examples [ex-vector]
+  ex-vector)
 
 (defn get-examples [rows] ;; Do we need to create a seq of seqs? simplify?
+  "For each URL, scrape its examples, package for multi-insert"
+  (let [num-agents 2
+        num-items (count rows)
+        bucket-size (int (/ num-items num-agents))
+        buckets (partition bucket-size bucket-size [] rows)
+        agents (map #(agent %) buckets)]
+      (doall (map #(send-off % scrape-example-strings) agents))))
+
+(defn get-examples2 [rows] ;; Do we need to create a seq of seqs? simplify?
   "For each URL, scrape its examples, package for multi-insert"
   (insert-all-examples (apply concat ;; because we create a seq of seqs
                               (map (fn [{item_id :item_id url :url}]
                                 (map #(vector item_id %)
                                      (scrape-example-strings url)))
                                    rows))))
+
+(defn scrape-example-strings [{item_id :item_id url :url}]
+  (let [html (slurp url)
+        example-strings (map second (re-seq #":body\s\\\"(.*?)\\\"," html))]
+    (prn (map #(vector item_id %) example-strings))))
+
+(defn scrape-example-strings2 [url]
+  (let [html (slurp url)
+        example-strings (map second (re-seq #":body\s\\\"(.*?)\\\"," html))]
+    example-strings))
 
 (defn index [params]
   "Add sections to the Index page "
