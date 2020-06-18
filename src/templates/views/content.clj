@@ -8,9 +8,6 @@
         [clojure.pprint :as pprint]
         [rewrite-clj.parser :as p]))
 
-(defn attr-str [s]
-  (.toLowerCase (replace (replace s " " "-") "," "")))
-
 (defn top-query [] (db/query (env :database-url "postgres://localhost:5432/docs")["select name, id as kingdom_id from kingdom ORDER BY kingdom.name ASC"]))
 
 (defn kingdom-query [id] (db/query (env :database-url "postgres://localhost:5432/docs")["select kingdom.id as kingdom_id, kingdom.name as title, clan.name as name, clan.id as clan_id from kingdom, clan where clan.kingdom_id = kingdom.id AND kingdom_id = ?" id]))
@@ -21,7 +18,7 @@
 
 (defn item-query [id] (db/query (env :database-url "postgres://localhost:5432/docs")["select item.name as title from item where item.id = ?" id]))
 
-(defn scrape-query [] (db/query (env :database-url "postgres://localhost:5432/docs") ["select id as item_id, url from item GROUP BY id, url limit 10"]))
+(defn scrape-query [] (db/query (env :database-url "postgres://localhost:5432/docs") ["select id as item_id, url from item GROUP BY id, url"]))
 
 (defn get-query
   ([name]
@@ -35,10 +32,10 @@
      :family (family-query id)
      :item (item-query id)})))
 
+(defn attr-str [s]
+  (.toLowerCase (replace (replace s " " "-") "," "")))
 (defn get-title [rows] (get (first rows) :title "Clojure"))
-
 (defn get-section-id [title](attr-str title))
-
 (defn cdata-to-string [str]
   (replace str #"\\\\n" "\n"))
 
@@ -78,53 +75,26 @@
                     [:item_id :example]
                     ex-vector))
 
-;; rows <-- select url, item_id from items
-;; catch exceptions?
-(defn do-result
-  [result]
-  (if (and (map? result)
-           (contains? result :url)
-           (contains? result :data))
-    (println "In do-result: " result)))
+(defn scrape-example-strings [{:keys [item_id url]}]
+  (let [html (slurp url)
+        example-strings (map second (re-seq #":body\s\\\"(.*?)\\\"," html))]
+    (map #(vector item_id %) example-strings)))
 
-(defn insert-all-examples2 [ex-vector]
-  ex-vector)
-
-(defn get-examples2 [rows] ;; Do we need to create a seq of seqs? simplify?
-  "For each URL, scrape its examples, package for multi-insert"
-  (let [num-agents 1
-        num-items (count rows)
-        bucket-size (int (/ num-items num-agents))
-        buckets (partition bucket-size bucket-size rows)
-        agents (map #(agent %) buckets)]
-      (map #(send-off % scrape-example-strings2) agents)
-      (apply await agents)
-    (shutdown-agents)
-      ))
+(defn get-urls [rows]
+  (let [agents (doall (map #(agent %) rows))]
+    (doseq [agent agents] (send-off agent scrape-example-strings))
+    (apply await agents)
+    (doall (map #(deref %) agents))))
 
 (defn get-examples [rows] ;; Do we need to create a seq of seqs? simplify?
   "For each URL, scrape its examples, package for multi-insert"
   (insert-all-examples (apply concat ;; because we create a seq of seqs
-                              (map (fn [{item_id :item_id url :url}]
-                                (map #(vector item_id %)
-                                     (scrape-example-strings url)))
-                                   rows))))
+                              (get-urls rows)))
+  [:p "done!"])
 
-(defn scrape-example-strings2 [{item_id :item_id url :url}]
-  (try
-   (let [html (slurp url)
-         example-strings (map second (re-seq #":body\s\\\"(.*?)\\\"," html))]
-     (class example-strings))
-
-(catch Exception e (str "Caught exception: " (.getMessage e)))
-   )
-
-  )
-
-(defn scrape-example-strings [url]
-  (let [html (slurp url)
-        example-strings (map second (re-seq #":body\s\\\"(.*?)\\\"," html))]
-    example-strings))
+(defn scrape-page []
+  "Populate DB with scraped examples"
+  (get-examples (get-query :scrape)))
 
 (defn index [params]
   "Add sections to the Index page "
@@ -134,16 +104,6 @@
     (if (= :item table)
       (make-item-section rows table)
       (make-section rows table)))))
-
-(defn scrape-page []
-  "Populate DB with scraped examples"
-  ;;(make-scrape-section (get-query :scrape))
-  ;; (get-examples2 (get-query :scrape))
-  (get-examples2 [{:item_id 1, :url "https://clojuredocs.org/clojure.core/swap!"} {:item_id 2, :url "https://clojuredocs.org/clojure.core/do"}])
- ;; (doall (get-query :scrape))
-  )
-
-
 
 
 
