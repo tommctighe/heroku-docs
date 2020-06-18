@@ -97,8 +97,9 @@
         bucket-size (int (/ num-items num-agents))
         buckets (partition bucket-size bucket-size rows)
         agents (map #(agent %) buckets)]
-      (doall (map #(send-off % scrape-example-strings2) agents))
-      
+      (map #(send-off % scrape-example-strings2) agents)
+      (apply await agents)
+    (shutdown-agents)
       ))
 
 (defn get-examples [rows] ;; Do we need to create a seq of seqs? simplify?
@@ -110,10 +111,15 @@
                                    rows))))
 
 (defn scrape-example-strings2 [{item_id :item_id url :url}]
-  (let [html (slurp url)
-        example-strings (map second (re-seq #":body\s\\\"(.*?)\\\"," html))]
-    (prn (map #(vector item_id %) example-strings))
-    ) (prn  "HERE"))
+  (try
+   (let [html (slurp url)
+         example-strings (map second (re-seq #":body\s\\\"(.*?)\\\"," html))]
+     (class example-strings))
+
+(catch Exception e (str "Caught exception: " (.getMessage e)))
+   )
+
+  )
 
 (defn scrape-example-strings [url]
   (let [html (slurp url)
@@ -133,7 +139,7 @@
   "Populate DB with scraped examples"
   ;;(make-scrape-section (get-query :scrape))
   ;; (get-examples2 (get-query :scrape))
-  (doall (get-examples2 [{:item_id 1, :url "https://clojuredocs.org/clojure.core/swap!"} {:item_id 2, :url "https://clojuredocs.org/clojure.core/do"}]))
+  (get-examples2 [{:item_id 1, :url "https://clojuredocs.org/clojure.core/swap!"} {:item_id 2, :url "https://clojuredocs.org/clojure.core/do"}])
  ;; (doall (get-query :scrape))
   )
 
