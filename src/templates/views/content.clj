@@ -72,7 +72,7 @@
      [:p "(for [ex examples]"]
      [:pre {:class "prettyprint lang-clj"} (cdata-to-string "code...")]]))
 
-(defn insert-all-examples2 [ex-vector]
+(defn insert-all-examples [ex-vector]
   (db/insert-multi! (env :database-url "postgres://localhost:5432/docs")
                     :examples
                     [:item_id :example]
@@ -87,19 +87,21 @@
            (contains? result :data))
     (println "In do-result: " result)))
 
-(defn insert-all-examples [ex-vector]
+(defn insert-all-examples2 [ex-vector]
   ex-vector)
 
-(defn get-examples [rows] ;; Do we need to create a seq of seqs? simplify?
+(defn get-examples2 [rows] ;; Do we need to create a seq of seqs? simplify?
   "For each URL, scrape its examples, package for multi-insert"
-  (let [num-agents 2
+  (let [num-agents 1
         num-items (count rows)
         bucket-size (int (/ num-items num-agents))
-        buckets (partition bucket-size bucket-size [] rows)
+        buckets (partition bucket-size bucket-size rows)
         agents (map #(agent %) buckets)]
-      (doall (map #(send-off % scrape-example-strings) agents))))
+      (doall (map #(send-off % scrape-example-strings2) agents))
+      
+      ))
 
-(defn get-examples2 [rows] ;; Do we need to create a seq of seqs? simplify?
+(defn get-examples [rows] ;; Do we need to create a seq of seqs? simplify?
   "For each URL, scrape its examples, package for multi-insert"
   (insert-all-examples (apply concat ;; because we create a seq of seqs
                               (map (fn [{item_id :item_id url :url}]
@@ -107,12 +109,13 @@
                                      (scrape-example-strings url)))
                                    rows))))
 
-(defn scrape-example-strings [{item_id :item_id url :url}]
+(defn scrape-example-strings2 [{item_id :item_id url :url}]
   (let [html (slurp url)
         example-strings (map second (re-seq #":body\s\\\"(.*?)\\\"," html))]
-    (prn (map #(vector item_id %) example-strings))))
+    (prn (map #(vector item_id %) example-strings))
+    ) (prn  "HERE"))
 
-(defn scrape-example-strings2 [url]
+(defn scrape-example-strings [url]
   (let [html (slurp url)
         example-strings (map second (re-seq #":body\s\\\"(.*?)\\\"," html))]
     example-strings))
@@ -129,9 +132,10 @@
 (defn scrape-page []
   "Populate DB with scraped examples"
   ;;(make-scrape-section (get-query :scrape))
-  (get-examples (get-query :scrape)))
-
-
+  ;; (get-examples2 (get-query :scrape))
+  (doall (get-examples2 [{:item_id 1, :url "https://clojuredocs.org/clojure.core/swap!"} {:item_id 2, :url "https://clojuredocs.org/clojure.core/do"}]))
+ ;; (doall (get-query :scrape))
+  )
 
 
 
