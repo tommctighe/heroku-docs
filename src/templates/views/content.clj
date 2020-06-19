@@ -69,6 +69,16 @@
      [:p "(for [ex examples]"]
      [:pre {:class "prettyprint lang-clj"} (cdata-to-string "code...")]]))
 
+
+;; Don't want to insert duplicates -- could drop the examples table first, but not safe if INSERT then fails
+;; Need to catch any exceptions
+;; What if there are no examples on a page?
+;; Add tests?
+;; Make the scrape page display pretty
+;; Move queries to /queries namespace
+;; Move scrape stuff to /scrape
+;; Move /content out of templates
+
 (defn insert-all-examples [ex-vector]
   (db/insert-multi! (env :database-url "postgres://localhost:5432/docs")
                     :examples
@@ -80,30 +90,59 @@
         example-strings (map second (re-seq #":body\s\\\"(.*?)\\\"," html))]
     (map #(vector item_id %) example-strings)))
 
-(defn get-urls [rows]
+(defn dispatch-agents [rows]
   (let [agents (doall (map #(agent %) rows))]
     (doseq [agent agents] (send-off agent scrape-example-strings))
     (apply await agents)
     (doall (map #(deref %) agents))))
 
-(defn get-examples [rows] ;; Do we need to create a seq of seqs? simplify?
+(defn get-examples [rows] 
   "For each URL, scrape its examples, package for multi-insert"
   (insert-all-examples (apply concat ;; because we create a seq of seqs
-                              (get-urls rows)))
+                              (dispatch-agents rows)))
   [:p "done!"])
 
 (defn scrape-page []
   "Populate DB with scraped examples"
   (get-examples (get-query :scrape)))
 
+(defn index3 [params]
+  "Add sections to the Index page, based on table name and foreign key"
+  (for [[table fk] params]
+    (let [f (Integer/parseInt fk)
+        rows (get-query table f)]
+      (case table
+        :item (make-item-section rows table)
+        :clan (if (= 1 (count rows)) ;; Skip clan if it has only one family
+                [:p "count is 1"]
+                (make-section rows table))
+        (make-section rows table)))))
+
 (defn index [params]
-  "Add sections to the Index page "
+  "Add sections to the Index page, based on table name and foreign key"
+  (for [[table fk] params]
+    (let [f (Integer/parseInt fk)
+        rows (get-query table f)]
+      (case table
+        :item (make-item-section rows table)
+        :clan (if (= 1 (count rows)) ;; Skip clan if it has only one family
+                          (if (not (contains? params :family))
+                            (make-section (get-query :family (:family_id (first rows))) :family))
+                  (make-section rows table))
+        (make-section rows table))))) ;; default for :kingdom and :family tables
+
+(defn index2 [params]
+  "Add sections to the Index page, based on table name and foreign key"
   (for [[table fk] params]
     (let [f (Integer/parseInt fk)
         rows (get-query table f)]
     (if (= :item table)
       (make-item-section rows table)
-      (make-section rows table)))))
+      (if (and (= :clan table)
+               (= 1 (count rows))
+               (not (contains? params :family))) ;; Don't display a clan if it only has 1 family
+        (make-section (get-query :family (:family_id (first rows))) :family)
+        (make-section rows table))))))
 
 
 
