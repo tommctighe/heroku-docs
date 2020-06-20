@@ -6,7 +6,7 @@
             [ring.adapter.jetty :as jetty]
             [environ.core :refer [env]]
             [templates.views.layout :as layout]))
-
+ 
 (defroutes app
   (GET "/scrape" [] (layout/scrape-layout "Scrape"))
   (GET "/" {params :params}
