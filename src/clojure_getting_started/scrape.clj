@@ -1,66 +1,31 @@
 (ns scrape
-  (:import [org.jsoup Jsoup])
   (:require
-            [clojure.java.io :as io]
-            [clojure.java.jdbc :as db]
-            [ring.adapter.jetty :as jetty]
-            [environ.core :refer [env]]
-            [clojure.data.xml :refer :all]
-            [clojure.pprint :as p]
-            [templates.views.layout :as layout]))
+   [db]))
 
-(map second (re-seq #":body\s(.*?)\s:\w+?\s" "<a><![CDATA[\nfoo :body 1 :editors  \"(reduce + [1 2 3 4 5])  ;;=> 15\\n(reduce + [])           ;;=> 0\\n(reduce + [1])  :editors        ;;=> 1\\n(reduce + [1 2])        ;;=> 3\\n(reduce + 1 [])  :body 2 :editors       ;;=> 1\\n(reduce + 1 [2 3])      ;;=> 6\"  bar\n]]><![CDATA[\nbaz\n]]></a>"))
+;; Don't want to insert duplicates -- could drop the examples table first, but not safe if INSERT then fails
+;; Catch exceptions, agents can (await) forever
+;; What if there are no examples on a page?
+;; Add tests
+;; Make the scrape page display pretty
 
-(def code2 ";; make an atomic list\\n(def players (atom ()))\\n;; #'user/players\\n\\n;; conjoin a keyword into that list\\n(swap! players conj :player1)\\n;;=> (:player1)\\n\\n;; conjyoin a second keyword into the list\\n(swap! players conj :player2)\\n;;=> (:player2 :player1)\\n\\n;; take a look at what is in the list\\n(deref players)\\n;;=> (:player2 :player1)")
-
-(defn cdata-to-string [str]
-  (replace str #"\\n" "\n"))
-
-(defn get-rows []
-  (db/query (env :database-url "postgres://localhost:5432/docs")
-                                  ["select name, url from item limit 6"]))
-
-(defn slurpy [url]
+(defn scrape-example-strings [{:keys [item_id url]}]
   (let [html (slurp url)
         example-strings (map second (re-seq #":body\s\\\"(.*?)\\\"," html))]
-    example-strings))
+    (map #(vector item_id %) example-strings)))
 
-(defn mark-it-up [strings]
-  (for [string strings]
-    (format "<br>%s" string))
-  )
+(defn dispatch-agents [rows]
+  "Send off agents to scrape examples"
+  (let [agents (doall (map #(agent %) rows))]
+    (doseq [agent agents] (send-off agent scrape-example-strings))
+    (apply await agents)
+    (doall (map #(deref %) agents))))
 
-(defn make-html [rows]
-  (for [{:keys [name url]} rows
-        example (slurpy url)]
-    (str name ": " example)))
+(defn get-examples [rows] 
+  "For each URL, scrape its examples, package for multi-insert"
+  (db/insert-all-examples (apply concat ;; because we create a seq of seqs
+                              (dispatch-agents rows)))
+  [:p "done!"])
 
-(defn scrape []
-  {:status 200
-   :headers {"Content-Type" "text/html"}
-   :body (let [rows (get-rows)
-               html (make-html rows)]
-           html)})
-
-
-
-
-
-(defn link-count [url]
-  (let [conn (Jsoup/connect url)
-        page (.get conn)
-        text (.data (first (.select page "script")))]
-    text))
-
-
-(defn splash [sample]
-  {:status 200
-   :headers {"Content-Type" "text/html"}
-   :body (concat (for [kind ["camel" "snake" "kebab"]]
-                   (format "make into <a href='/%s?input=%s'> %s</a> case... </a><br />"
-                    kind sample kind))
-                ["<hr /><ul>"]
-                (for [s (db/query (env :database-url "postgres://localhost:5432/docs")
-                                  ["select content from sayings"])]
-                  (format "<li>%s</li>" (:content s)))
-                ["</ul>"])})
+(defn scrape-page []
+  "Populate DB with scraped examples"
+  (get-examples (db/get-query :scrape)))

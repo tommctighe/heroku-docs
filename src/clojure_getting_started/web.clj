@@ -3,13 +3,9 @@
             [compojure.handler :refer [site]]
             [compojure.route :as route]
             [clojure.java.io :as io]
-            [clojure.java.jdbc :as db]
             [ring.adapter.jetty :as jetty]
             [environ.core :refer [env]]
-            [clojure.pprint :as p]
-            [templates.views.layout :as layout]
-            [templates.views.content :as content]
-            [scrape :as scraper]))
+            [templates.views.layout :as layout]))
 
 (defroutes app
   (GET "/scrape" [] (layout/scrape-layout "Scrape"))

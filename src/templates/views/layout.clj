@@ -1,7 +1,8 @@
 (ns templates.views.layout
-  (:use [hiccup.page :only (html5 include-css include-js)])
-  (:use [templates.views.content  :as c]))
-
+  (:use [hiccup.page :only (html5 include-css include-js)]
+        [templates.views.content :only (make-section)]
+        [scrape :only (scrape-page)]
+        [db]))
 
 (defn app [title & content]
   (html5 {:ng-app "myApp" :lang "en"}
@@ -17,7 +18,7 @@
           (include-js "https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
           (include-js "js/lang-clj.js")
           [:body
-           [:div {:id "main-content"}  (c/make-section (get-query :top) "top") content]]])
+           [:div {:id "main-content"}  (make-section (db/get-query :top) "top") content]]])
   )
 
 (defn scrape-layout [title & content]
@@ -32,5 +33,4 @@
           [:body
            [:div {:id "main-content"}
             [:p "scraping..."]
-            (c/scrape-page)]]])
-  )
+            (scrape-page)]]]))

@@ -1,37 +1,10 @@
 (ns templates.views.content
   (:use [hiccup.form]
         [hiccup.element :only (link-to)]
-        [clojure.pprint :as pp]
-        [clojure.java.jdbc :as db]
-        [environ.core :refer [env]]
         [clojure.string :as s]
-        [clojure.pprint :as pprint]
-        [rewrite-clj.parser :as p]))
+        [db :as q]))
 
-(defn top-query [] (db/query (env :database-url "postgres://localhost:5432/docs")["select name, id as kingdom_id from kingdom ORDER BY kingdom.name ASC"]))
-
-(defn kingdom-query [id] (db/query (env :database-url "postgres://localhost:5432/docs")["select kingdom.id as kingdom_id, kingdom.name as title, clan.name as name, clan.id as clan_id from kingdom, clan where clan.kingdom_id = kingdom.id AND kingdom_id = ?" id]))
-
-(defn clan-query [id] (db/query (env :database-url "postgres://localhost:5432/docs")["select kingdom.id as kingdom_id, clan.id as clan_id, clan.name as title, family.name as name, family.id as family_id from kingdom, clan, family where family.clan_id = clan.id AND kingdom.id = clan.kingdom_id AND clan_id = ?" id]))
-
-(defn family-query [id] (db/query (env :database-url "postgres://localhost:5432/docs")["select kingdom.id as kingdom_id, clan.id as clan_id, family.id as family_id, family.name as title, item.name as name, item.id as item_id from kingdom, clan, family, item where item.family_id = family.id and family.clan_id = clan.id AND kingdom.id = clan.kingdom_id AND family_id = ?" id]))
-
-(defn item-query [id] (db/query (env :database-url "postgres://localhost:5432/docs")["select item.name as title from item where item.id = ?" id]))
-
-(defn scrape-query [] (db/query (env :database-url "postgres://localhost:5432/docs") ["select id as item_id, url from item GROUP BY id, url"]))
-
-(defn get-query
-  ([name]
-   (name {
-          :top (top-query)
-          :scrape (scrape-query)}))
-  ([name id]
-   (name {
-     :kingdom (kingdom-query id)
-     :clan (clan-query id)
-     :family (family-query id)
-     :item (item-query id)})))
-
+;; Utilities
 (defn attr-str [s]
   (.toLowerCase (replace (replace s " " "-") "," "")))
 (defn get-title [rows] (get (first rows) :title "Clojure"))
@@ -40,6 +13,7 @@
   (replace str #"\\\\n" "\n"))
 
 (defn make-section [rows class-name]
+  "Create <section>, format links to child sections"
   (let [title (get-title rows)
         s-id (get-section-id title)]
     [:section {:id s-id :class class-name}
@@ -58,6 +32,7 @@
            [:div {:class "card"} name]]))]]))
 
 (defn make-item-section [rows class-name]
+  "Create <section> that explains a function"
   (let [title (get-title rows)
         s-id (get-section-id title)
         s-name (meta (resolve (symbol title)))]
@@ -66,110 +41,20 @@
      [:div {:class "note"} [:p "A little rap about this section..."]]     
      [:p {:class "docstring"} (str (:doc s-name))]
      [:p {:class "arglists"} (str (:arglists s-name))]
-     [:p "(for [ex examples]"]
-     [:pre {:class "prettyprint lang-clj"} (cdata-to-string "code...")]]))
-
-
-;; Don't want to insert duplicates -- could drop the examples table first, but not safe if INSERT then fails
-;; Need to catch any exceptions
-;; What if there are no examples on a page?
-;; Add tests?
-;; Make the scrape page display pretty
-;; Move queries to /queries namespace
-;; Move scrape stuff to /scrape
-;; Move /content out of templates
-
-(defn insert-all-examples [ex-vector]
-  (db/insert-multi! (env :database-url "postgres://localhost:5432/docs")
-                    :examples
-                    [:item_id :example]
-                    ex-vector))
-
-(defn scrape-example-strings [{:keys [item_id url]}]
-  (let [html (slurp url)
-        example-strings (map second (re-seq #":body\s\\\"(.*?)\\\"," html))]
-    (map #(vector item_id %) example-strings)))
-
-(defn dispatch-agents [rows]
-  (let [agents (doall (map #(agent %) rows))]
-    (doseq [agent agents] (send-off agent scrape-example-strings))
-    (apply await agents)
-    (doall (map #(deref %) agents))))
-
-(defn get-examples [rows] 
-  "For each URL, scrape its examples, package for multi-insert"
-  (insert-all-examples (apply concat ;; because we create a seq of seqs
-                              (dispatch-agents rows)))
-  [:p "done!"])
-
-(defn scrape-page []
-  "Populate DB with scraped examples"
-  (get-examples (get-query :scrape)))
-
-(defn index3 [params]
-  "Add sections to the Index page, based on table name and foreign key"
-  (for [[table fk] params]
-    (let [f (Integer/parseInt fk)
-        rows (get-query table f)]
-      (case table
-        :item (make-item-section rows table)
-        :clan (if (= 1 (count rows)) ;; Skip clan if it has only one family
-                [:p "count is 1"]
-                (make-section rows table))
-        (make-section rows table)))))
+     (for [r rows]
+       [:pre {:class "prettyprint lang-clj"} (cdata-to-string (:example r))])
+     ]))
 
 (defn index [params]
-  "Add sections to the Index page, based on table name and foreign key"
+  "Add sections to the Index page, given table name & foreign key"
   (for [[table fk] params]
     (let [f (Integer/parseInt fk)
-        rows (get-query table f)]
+        rows (db/get-query table f)]
       (case table
         :item (make-item-section rows table)
-        :clan (if (= 1 (count rows)) ;; Skip clan if it has only one family
+        :clan (if (= 1 (count rows)) ;; Skip clan section if it has only one family
                           (if (not (contains? params :family))
-                            (make-section (get-query :family (:family_id (first rows))) :family))
+                            (make-section ;; Display the family section instead
+                             (db/get-query :family (:family_id (first rows))) :family))
                   (make-section rows table))
-        (make-section rows table))))) ;; default for :kingdom and :family tables
-
-(defn index2 [params]
-  "Add sections to the Index page, based on table name and foreign key"
-  (for [[table fk] params]
-    (let [f (Integer/parseInt fk)
-        rows (get-query table f)]
-    (if (= :item table)
-      (make-item-section rows table)
-      (if (and (= :clan table)
-               (= 1 (count rows))
-               (not (contains? params :family))) ;; Don't display a clan if it only has 1 family
-        (make-section (get-query :family (:family_id (first rows))) :family)
-        (make-section rows table))))))
-
-
-
-
-
-
-
-
-
-
-(defn not-found []
-  [:div
-   [:h1 {:class "info-warning"} "Page Not Found"]
-   [:p "that page doesn't exist."]
-   (link-to {class "btn btn-primary"} "/" "Home")])
-
-(def code3 (resolve (symbol "map")))
-(defn print-code-out [code]
-  (with-out-str (pprint/write code :dispatch pprint/code-dispatch)))
-
-(defn print-code [code]
-  (pprint/write code :dispatch pprint/code-dispatch))
-
-(defn printy [code ]
-  (pprint/with-pprint-dispatch
-    pprint/code-dispatch   ;
-                 (pprint/pprint code)))
-
-(def code '(do (println "Hello") (println "Goodbye") (println "Hey, you left me out!")))
-(print-code code)
+        (make-section rows table))))) ;; default for :kingdom & :family tables
