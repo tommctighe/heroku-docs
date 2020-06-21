@@ -1,6 +1,6 @@
 (ns clojure-getting-started.scrape
   (:require
-   [clojure-getting-started.db]))
+   [clojure-getting-started.db :as db]))
 
 ;; Don't want to insert duplicates -- could drop the examples table first, but not safe if INSERT then fails
 ;; Catch exceptions, agents can (await) forever
