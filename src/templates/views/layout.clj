@@ -2,7 +2,7 @@
   (:use [hiccup.page :only (html5 include-css include-js)]
         [templates.views.content :only (make-section)]
         [clojure-getting-started.scrape :only (scrape-page)]
-        [clojure-getting-started.db]))
+        [clojure-getting-started.db :as db]))
 
 (defn app [title & content]
   (html5 {:ng-app "myApp" :lang "en"}
