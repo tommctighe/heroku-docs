@@ -1,13 +1,13 @@
-(ns scrape
+(ns clojure-getting-started.scrape
   (:require
-   [db]))
+   [clojure-getting-started.db]))
 
 ;; Don't want to insert duplicates -- could drop the examples table first, but not safe if INSERT then fails
 ;; Catch exceptions, agents can (await) forever
 ;; What if there are no examples on a page?
 ;; Add tests
 ;; Make the scrape page display pretty
-
+  
 (defn scrape-example-strings [{:keys [item_id url]}]
   (let [html (slurp url)
         example-strings (map second (re-seq #":body\s\\\"(.*?)\\\"," html))]

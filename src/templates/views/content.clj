@@ -2,7 +2,7 @@
   (:use [hiccup.form]
         [hiccup.element :only (link-to)]
         [clojure.string :as s]
-        [db :as q]))
+        [clojure-getting-started.db]))
 
 ;; Utilities
 (defn attr-str [s]

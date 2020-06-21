@@ -1,4 +1,4 @@
-(ns db
+(ns clojure-getting-started.db
   (:use [clojure.java.jdbc :as d]
         [environ.core :refer [env]]))
 

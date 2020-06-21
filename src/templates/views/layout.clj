@@ -1,8 +1,8 @@
 (ns templates.views.layout
   (:use [hiccup.page :only (html5 include-css include-js)]
         [templates.views.content :only (make-section)]
-        [scrape :only (scrape-page)]
-        [db]))
+        [clojure-getting-started.scrape :only (scrape-page)]
+        [clojure-getting-started.db]))
 
 (defn app [title & content]
   (html5 {:ng-app "myApp" :lang "en"}

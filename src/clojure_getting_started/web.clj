@@ -5,7 +5,8 @@
             [clojure.java.io :as io]
             [ring.adapter.jetty :as jetty]
             [environ.core :refer [env]]
-            [templates.views.layout :as layout]))
+            [templates.views.layout :as layout]
+            [templates.views.content :as content]))
  
 (defroutes app
   (GET "/scrape" [] (layout/scrape-layout "Scrape"))
