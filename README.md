@@ -1,39 +1,13 @@
-
-# clojure-getting-started
-
-A barebones Clojure app, which can easily be deployed to Heroku.  
-
-This application support the [Getting Started with Clojure](https://devcenter.heroku.com/articles/getting-started-with-clojure) article - check it out.
-
-## Running Locally
-
-Make sure you have Clojure installed.  Also, install the [Heroku Toolbelt](https://toolbelt.heroku.com/).
-
-```sh
-$ git clone https://github.com/heroku/clojure-getting-started.git
-$ cd clojure-getting-started
-$ lein repl
-user=> (require 'clojure-getting-started.web)
-user=>(def server (clojure-getting-started.web/-main))
-```
-
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-## Deploying to Heroku
-
-```sh
-$ heroku create
-$ git push heroku master
-$ heroku open
-```
-
-or
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## Documentation
-
-For more information about using Clojure on Heroku, see these Dev Center articles:
-
-- [Clojure on Heroku](https://devcenter.heroku.com/categories/clojure)
-
+When I was getting started with Clojure, 
+I was really impressed with how well the language 
+embodied its guiding principles: it was concise, expressive, 
+clear, and consistent. But having worked as a technical 
+writer and editor, I thought the documentation
+could be improved. This app is kind of a mash-up of the
+Closure cheatsheet and clojuredocs.org — ideally 
+you'd be able to drill down and focus on a single 
+core function, but within the context of that function's 
+family of related functions. By zooming in and out, from 
+the 10 or so top-level categories to the discussion of
+ an individual function, you'd learn the language 
+faster and more thoroughly. 
